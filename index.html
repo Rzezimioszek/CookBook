@@ -202,5 +202,71 @@ document.getElementById("exportBtn").onclick = () => {
 };
 
   </script>
+  <script>
+  const recipeList = document.getElementById("recipeList");
+  const searchInput = document.getElementById("search");
+  const preview = document.getElementById("preview");
+  const exportBtn = document.getElementById("exportPdfBtn");
+
+  let allRecipes = [];
+
+  fetch("recipes.json")
+    .then(res => res.json())
+    .then(data => {
+      allRecipes = data;
+      renderRecipeList(data);
+    });
+
+  function renderRecipeList(data) {
+    recipeList.innerHTML = "";
+    data.forEach(cat => {
+      const details = document.createElement("details");
+      const summary = document.createElement("summary");
+      summary.textContent = cat.category;
+      details.appendChild(summary);
+      const ul = document.createElement("ul");
+
+      cat.recipes.forEach(recipe => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = "#";
+        a.textContent = recipe.title;
+        a.onclick = () => {
+          fetch(recipe.path)
+            .then(res => res.text())
+            .then(md => {
+              selectedRecipe.title = recipe.title;
+              preview.innerHTML = marked.parse(md);
+              exportBtn.style.display = "inline-block";
+            });
+        };
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+
+      details.appendChild(ul);
+      recipeList.appendChild(details);
+    });
+  }
+
+  searchInput.addEventListener("input", () => {
+    const term = searchInput.value.toLowerCase();
+    const filtered = allRecipes.map(cat => ({
+      category: cat.category,
+      recipes: cat.recipes.filter(r => r.title.toLowerCase().includes(term))
+    })).filter(cat => cat.recipes.length > 0);
+
+    renderRecipeList(filtered);
+  });
+
+  exportBtn.addEventListener("click", () => {
+    const doc = new jspdf.jsPDF();
+    doc.text(selectedRecipe.title, 10, 10);
+    const text = preview.textContent;
+    const lines = doc.splitTextToSize(text, 180);
+    doc.text(lines, 10, 20);
+    doc.save(selectedRecipe.title + ".pdf");
+  });
+</script>
 </body>
 </html>
