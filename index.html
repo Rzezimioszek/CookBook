@@ -148,7 +148,7 @@ const mealPlan = {};
 const daysContainer = document.getElementById("days");
 days.forEach(day => {
   const div = document.createElement("div");
-  div.innerHTML = '<strong>${day}:</strong> <span id="slot-${day}">—</span>';
+  div.innerHTML = `<strong>${day}:</strong> <span id="slot-${day}">—</span>`;
   div.onclick = () => {
     if (selectedRecipe.title) {
       const repeat = confirm("Czy chcesz zaplanować ten posiłek na 2 dni?");
