@@ -1,3 +1,3 @@
 # CookBook (preview)
 
-![preview](https://rzezimioszek.github.io/CookBook/)
+[preview](https://rzezimioszek.github.io/CookBook/)
