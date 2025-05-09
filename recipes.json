@@ -1,25 +1,49 @@
 [
-{"category": "obiady",
-"recipes": [
   {
-    "title": "Lasagne",
-    "path": "przepisy/obiady/lasagne.md"
+    "category": "Zupy",
+    "recipes": [
+      {
+        "title": "Zupa pomidorowa",
+        "path": "recipes/zupa_pomidorowa.md"
+      },
+      {
+        "title": "Żurek",
+        "path": "recipes/zurek.md"
+      },
+      {
+        "title": "Barszcz czerwony",
+        "path": "recipes/barszcz.md"
+      }
+    ]
   },
   {
-    "title": "Zupa Pomidorowa",
-    "path": "przepisy/obiady/zupa_pomidorowa.md"
+    "category": "Dania główne",
+    "recipes": [
+      {
+        "title": "Kotlet schabowy",
+        "path": "recipes/schabowy.md"
+      },
+      {
+        "title": "Pierogi ruskie",
+        "path": "recipes/pierogi.md"
+      },
+      {
+        "title": "Gołąbki",
+        "path": "recipes/golabki.md"
+      }
+    ]
   },
-  ]
-},
-{"category": "zupy",
-"recipes": [
   {
-    "title": "Sernik",
-    "path": "przepisy/desery/sernik.md"
-  },
-  {
-    "title": "Brownie",
-    "path": "przepisy/desery/brownie.md"
+    "category": "Desery",
+    "recipes": [
+      {
+        "title": "Sernik",
+        "path": "recipes/sernik.md"
+      },
+      {
+        "title": "Szarlotka",
+        "path": "recipes/szarlotka.md"
+      }
+    ]
   }
-]}
 ]
