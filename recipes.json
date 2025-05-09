@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Lasagne",
+    "category": "obiady",
+    "path": "przepisy/obiady/lasagne.md"
+  },
+  {
+    "title": "Zupa Pomidorowa",
+    "category": "obiady",
+    "path": "przepisy/obiady/zupa_pomidorowa.md"
+  },
+  {
+    "title": "Sernik",
+    "category": "desery",
+    "path": "przepisy/desery/sernik.md"
+  },
+  {
+    "title": "Brownie",
+    "category": "desery",
+    "path": "przepisy/desery/brownie.md"
+  }
+]
