@@ -4,15 +4,15 @@
     "recipes": [
       {
         "title": "Zupa pomidorowa",
-        "path": "recipes/zupa_pomidorowa.md"
+        "path": "przepisy/zupa_pomidorowa.md"
       },
       {
         "title": "Żurek",
-        "path": "recipes/zurek.md"
+        "path": "przepisy/zurek.md"
       },
       {
         "title": "Barszcz czerwony",
-        "path": "recipes/barszcz.md"
+        "path": "przepisy/barszcz.md"
       }
     ]
   },
@@ -21,15 +21,15 @@
     "recipes": [
       {
         "title": "Kotlet schabowy",
-        "path": "recipes/schabowy.md"
+        "path": "przepisy/schabowy.md"
       },
       {
         "title": "Pierogi ruskie",
-        "path": "recipes/pierogi.md"
+        "path": "przepisy/pierogi.md"
       },
       {
         "title": "Gołąbki",
-        "path": "recipes/golabki.md"
+        "path": "przepisy/golabki.md"
       }
     ]
   },
@@ -38,11 +38,11 @@
     "recipes": [
       {
         "title": "Sernik",
-        "path": "recipes/sernik.md"
+        "path": "przepisy/sernik.md"
       },
       {
         "title": "Szarlotka",
-        "path": "recipes/szarlotka.md"
+        "path": "przepisy/szarlotka.md"
       }
     ]
   }
