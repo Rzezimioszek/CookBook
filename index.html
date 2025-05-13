@@ -11,10 +11,6 @@
 </head>
 <body>
   <div class="overlay" id="overlay"></div>
-  <aside class="sidebar" id="sidebar">
-    <input type="text" id="search" placeholder="Wyszukaj przepis...">
-    <div id="recipeList"></div>
-  </aside>
 
   <header>
     <h1>Moje Przepisy</h1>
@@ -45,31 +41,7 @@
   <button id="exportPdfBtn" style="display:none">Eksportuj ten przepis do PDF</button>
 </main>
 
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script>
-    const burger = document.getElementById("burgerBtn");
-    const sidebar = document.getElementById("sidebar");
-    const overlay = document.getElementById("overlay");
-    burger.onclick = () => {
-      sidebar.classList.toggle("active");
-      overlay.classList.toggle("active");
-    };
-    overlay.onclick = () => {
-      sidebar.classList.remove("active");
-      overlay.classList.remove("active");
-    };
-    document.getElementById("plannerBtn").onclick = () => {
-      document.getElementById("mealPlanner").style.display =
-        document.getElementById("mealPlanner").style.display === "none" ? "block" : "none";
-    };
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script>
-    const loading = document.getElementById("loading");
-    loading.style.display = "flex";
-    window.addEventListener("load", () => loading.style.display = "none");
-  </script>
   <script>
     const days = ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"];
 const selectedRecipe = { title: null };
