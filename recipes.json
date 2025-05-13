@@ -3,7 +3,7 @@
     "category": "Ciasta",
     "recipes": [
       {
-        "title": "Składniki",
+        "title": "3 Bit",
         "path": "przepisy/Ciasta/3 bit.md"
       },
       {
@@ -15,15 +15,15 @@
         "path": "przepisy/Ciasta/Kopiec kreta.md"
       },
       {
-        "title": "Składniki",
+        "title": "Kręcone Z Owocami",
         "path": "przepisy/Ciasta/Kręcone z owocami.md"
       },
       {
-        "title": "Składniki",
+        "title": "Sernik Na Herbatnikach",
         "path": "przepisy/Ciasta/Sernik na herbatnikach.md"
       },
       {
-        "title": "Składniki",
+        "title": "Sernik Na Zimno",
         "path": "przepisy/Ciasta/Sernik na zimno.md"
       },
       {
@@ -36,11 +36,11 @@
     "category": "Inne",
     "recipes": [
       {
-        "title": "Składniki",
+        "title": "Ostry Sos Chilli",
         "path": "przepisy/Inne/Ostry sos chilli.md"
       },
       {
-        "title": "Składniki",
+        "title": "Syrop Z Cebuli",
         "path": "przepisy/Inne/Syrop z cebuli.md"
       }
     ]
@@ -53,11 +53,11 @@
         "path": "przepisy/Obiadowe/Bitki wołowe.md"
       },
       {
-        "title": "Składniki",
+        "title": "Devolay",
         "path": "przepisy/Obiadowe/Devolay.md"
       },
       {
-        "title": "Składniki",
+        "title": "Dorsz Pieczony",
         "path": "przepisy/Obiadowe/Dorsz pieczony.md"
       },
       {
@@ -65,91 +65,91 @@
         "path": "przepisy/Obiadowe/Duszone burgery z dorsza dla niemowlaka.md"
       },
       {
-        "title": "Składniki:",
+        "title": "Gulasz Z Indyka",
         "path": "przepisy/Obiadowe/Gulasz z indyka.md"
       },
       {
-        "title": "Składniki",
+        "title": "Kacze Piersi Pieczone W Miodzie",
         "path": "przepisy/Obiadowe/Kacze piersi pieczone w miodzie.md"
       },
       {
-        "title": "Składniki",
+        "title": "Kotlety Mielone",
         "path": "przepisy/Obiadowe/Kotlety mielone.md"
       },
       {
-        "title": "Składniki",
+        "title": "Krokiety Z Pieczarkami",
         "path": "przepisy/Obiadowe/Krokiety z pieczarkami.md"
       },
       {
-        "title": "Składniki",
+        "title": "Kurczak Pałki W Musztardzie",
         "path": "przepisy/Obiadowe/Kurczak pałki w musztardzie.md"
       },
       {
-        "title": "Składniki",
+        "title": "Kurczak Po Koreańsku",
         "path": "przepisy/Obiadowe/Kurczak po Koreańsku.md"
       },
       {
-        "title": "Składniki",
+        "title": "Lasagne Bolognese",
         "path": "przepisy/Obiadowe/Lasagne bolognese.md"
       },
       {
-        "title": "Składniki:",
+        "title": "Lasagne Z Kurczakiem I Szpinakiem",
         "path": "przepisy/Obiadowe/Lasagne z kurczakiem i szpinakiem.md"
       },
       {
-        "title": "Składniki",
+        "title": "Makaron Z Cukinią Po Węgiersku",
         "path": "przepisy/Obiadowe/Makaron z cukinią po węgiersku.md"
       },
       {
-        "title": "Składniki",
+        "title": "Makaron Z Krewetkami",
         "path": "przepisy/Obiadowe/Makaron z krewetkami.md"
       },
       {
-        "title": "Składniki",
+        "title": "Makaron Z Kurczakiem, Cukinią I Fetą",
         "path": "przepisy/Obiadowe/Makaron z kurczakiem, cukinią i fetą.md"
       },
       {
-        "title": "Składniki",
+        "title": "Mintaj Pieczony",
         "path": "przepisy/Obiadowe/Mintaj pieczony.md"
       },
       {
-        "title": "Składniki",
+        "title": "Naleśniki",
         "path": "przepisy/Obiadowe/Naleśniki.md"
       },
       {
-        "title": "Składniki",
+        "title": "Pasztet Drobiowy Rosołowy",
         "path": "przepisy/Obiadowe/Pasztet drobiowy rosołowy.md"
       },
       {
-        "title": "Składniki",
+        "title": "Polędwiczki W Sosie Musztardowym",
         "path": "przepisy/Obiadowe/Polędwiczki w sosie musztardowym.md"
       },
       {
-        "title": "Składniki",
+        "title": "Pstrąg Pieczony Z Ziołami",
         "path": "przepisy/Obiadowe/Pstrąg pieczony z ziołami.md"
       },
       {
-        "title": "Składniki",
+        "title": "Racuchy Z Jabłkami (bez Mleka)",
         "path": "przepisy/Obiadowe/Racuchy z jabłkami (bez mleka).md"
       },
       {
-        "title": "Składniki",
+        "title": "Risotto Z Kurczakiem",
         "path": "przepisy/Obiadowe/Risotto z kurczakiem.md"
       },
       {
-        "title": "Składniki",
+        "title": "Roladki Z Kurczaka",
         "path": "przepisy/Obiadowe/Roladki z kurczaka.md"
       },
       {
-        "title": "Składniki",
+        "title": "Schab W Kołderce",
         "path": "przepisy/Obiadowe/Schab w kołderce.md"
       },
       {
-        "title": "Składniki",
+        "title": "Szaszłyki Wołowe",
         "path": "przepisy/Obiadowe/Szaszłyki wołowe.md"
       },
       {
-        "title": "Składniki",
+        "title": "Żeberka W Miodzie",
         "path": "przepisy/Obiadowe/Żeberka w miodzie.md"
       }
     ]
@@ -158,19 +158,19 @@
     "category": "Sałatki",
     "recipes": [
       {
-        "title": "Składniki",
+        "title": "Cezar",
         "path": "przepisy/Sałatki/Cezar.md"
       },
       {
-        "title": "Składniki",
+        "title": "Sałatka Gryros",
         "path": "przepisy/Sałatki/Sałatka Gryros.md"
       },
       {
-        "title": "Składniki",
+        "title": "Sałatka Warstwowa",
         "path": "przepisy/Sałatki/Sałatka warstwowa.md"
       },
       {
-        "title": "Składniki",
+        "title": "Sałatka Z Pora Oraz Jajka",
         "path": "przepisy/Sałatki/Sałatka z pora oraz jajka.md"
       }
     ]
@@ -179,7 +179,7 @@
     "category": "Śniadaniowe",
     "recipes": [
       {
-        "title": "Składniki",
+        "title": "Pancake Jagodowe",
         "path": "przepisy/Śniadaniowe/Pancake jagodowe.md"
       }
     ]

@@ -54,7 +54,8 @@ def generate_recipes_json(base_directory='przepisy'):
             for md_file in os.listdir(category_path):
                 if md_file.endswith('.md'):
                     file_path = os.path.join(category_path, md_file)
-                    recipe_title = extract_title_from_md(file_path) or format_title_from_filename(md_file)
+                    # recipe_title = extract_title_from_md(file_path) or format_title_from_filename(md_file)
+                    recipe_title = format_title_from_filename(md_file)
 
                     category_data["recipes"].append({
                         "title": recipe_title,
