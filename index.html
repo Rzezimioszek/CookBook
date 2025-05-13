@@ -41,6 +41,8 @@
   <button id="exportPdfBtn" style="display:none">Eksportuj ten przepis do PDF</button>
 </main>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script>
     const days = ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"];
 const selectedRecipe = { title: null };
@@ -183,7 +185,7 @@ searchInput.addEventListener("input", () => {
 });
 </script>
 <script>
-  document.getElementById("exportPdfBtn").addEventListener("click", async () => {
+document.getElementById("exportPdfBtn").addEventListener("click", async () => {
     const { jsPDF } = window.jspdf;
 
     const preview = document.getElementById("preview");
@@ -222,8 +224,6 @@ searchInput.addEventListener("input", () => {
     sidePanel.classList.remove("open");
   });
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
 </body>
 </html>
