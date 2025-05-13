@@ -41,7 +41,6 @@
   <button id="exportPdfBtn" style="display:none">Eksportuj ten przepis do PDF</button>
 </main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script>
     const days = ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"];
 const selectedRecipe = { title: null };
@@ -183,17 +182,29 @@ searchInput.addEventListener("input", () => {
   renderRecipeList(filtered);
 });
 </script>
-<script type="module">
-  import { jsPDF } from "https://cdn.skypack.dev/jspdf";
+<script>
+  document.getElementById("exportPdfBtn").addEventListener("click", async () => {
+    const { jsPDF } = window.jspdf;
 
-  document.getElementById("exportPdfBtn").addEventListener("click", () => {
-    const doc = new jsPDF();
-    const content = document.getElementById("preview").innerText;
-    const lines = doc.splitTextToSize(content, 180);
-    doc.text(lines, 10, 10);
-    doc.save(`${selectedRecipe.title || "przepis"}.pdf`);
+    const preview = document.getElementById("preview");
+    const pdf = new jsPDF("p", "mm", "a4");
+    const scale = 2; // poprawia jakość
+
+    await html2canvas(preview, {
+      scale,
+      useCORS: true
+    }).then(canvas => {
+      const imgData = canvas.toDataURL("image/png");
+      const imgProps = pdf.getImageProperties(imgData);
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+
+      pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
+      pdf.save(`${selectedRecipe.title || "przepis"}.pdf`);
+    });
   });
 </script>
+
 
 <script>
   const burgerBtn = document.getElementById("burgerBtn");
@@ -211,6 +222,8 @@ searchInput.addEventListener("input", () => {
     sidePanel.classList.remove("open");
   });
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
 </body>
 </html>
