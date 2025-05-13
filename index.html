@@ -164,6 +164,7 @@ function renderRecipeList(data) {
             console.error("Problem loading recipe:", error);
             preview.innerHTML = `<p style="color: red">Nie można załadować przepisu: ${error.message}</p>`;
           });
+		  sidePanel.classList.remove("open"); // <- ukrywa panel po wyborze
       };
       li.appendChild(a);
       ul.appendChild(li);
