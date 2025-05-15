@@ -29,11 +29,11 @@ header h1 {
 }
 #burgerBtn, #plannerBtn {
   background: black;
-  height: 60px;
-  width: 60px;
-  border: 8px solid #005e99;
+  height: 48px;
+  width: 48px;
+  border: 2px solid #005e99;
   font-size: 12px;
-  border-radius: 2px;
+  border-radius: 8px;
   cursor: pointer;
   padding: 2px 2px;
 }
