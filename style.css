@@ -29,6 +29,8 @@ header h1 {
 }
 #burgerBtn, #plannerBtn {
   background: black;
+  height: 60px;
+  width: 60px;
   border: 1px solid #005e99;
   font-size: 0.5rem;
   border-radius: 8px;
