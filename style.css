@@ -29,7 +29,7 @@ header h1 {
 }
 #burgerBtn, #plannerBtn {
   background: black;
-  border: 1px solid blue;
+  border: 1px solid #005e99;
   font-size: 1.5rem;
   border-radius: 8px;
   cursor: pointer;
@@ -60,7 +60,7 @@ main {
 /* Przyciski */
 button {
   padding: 0.6em 1.2em;
-  border: 1px solid blue;
+  border: 1px solid #005e99;
   background-color: black;
   color: #fff;
   border-radius: 8px;
