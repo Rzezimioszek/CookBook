@@ -175,3 +175,66 @@ aside#plannerPanel.open {
   transform: translateX(0);
 }
 
+#mealPlanner h2 {
+  margin-top: 0;
+}
+
+#days {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Domyślnie 1 kolumna */
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+#days div {
+  aspect-ratio: 1 / 1; /* Kwadrat */
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+#days div:hover {
+  background-color: #f0f0f0;
+}
+
+/* Tablet i mniejsze laptopy: 2 kolumny */
+@media (min-width: 600px) {
+  #days {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Full HD i więcej: 7 kolumn w jednym wierszu */
+@media (min-width: 1200px) {
+  #days {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+#days div strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+#days div span {
+  font-weight: normal;
+  font-size: 0.9em;
+  color: #555;
+}
+
+#actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+

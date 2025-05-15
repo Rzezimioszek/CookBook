@@ -38,7 +38,9 @@
 
 <main>
   <div id="preview"></div>
-  <button id="exportPdfBtn" style="display:none">Eksportuj ten przepis do PDF</button>
+  <button id="exportPdfBtn" style="display:none">Eksportuj do PDF</button>
+  <button id="copyTextBtn" style="display:none">Kopiuj przepis</button>
+  <button id="copyLinkBtn" style="display:none">Kopiuj link</button>
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -266,6 +268,29 @@ document.getElementById("exportPdfBtn").addEventListener("click", async () => {
     sidePanel.classList.remove("open");
   });
 </script>
+<script>
+  const copyTextBtn = document.getElementById("copyTextBtn");
+  const copyLinkBtn = document.getElementById("copyLinkBtn");
+
+  copyTextBtn.addEventListener("click", () => {
+    const tempDiv = document.createElement("div");
+    tempDiv.innerHTML = preview.innerHTML;
+    const text = tempDiv.textContent || tempDiv.innerText || "";
+    navigator.clipboard.writeText(text).then(() => {
+      alert("Przepis skopiowany do schowka.");
+    });
+  });
+
+  copyLinkBtn.addEventListener("click", () => {
+    const currentUrl = new URL(window.location.href);
+    currentUrl.searchParams.set("category", selectedRecipe.category);
+    currentUrl.searchParams.set("recipe", selectedRecipe.title);
+    navigator.clipboard.writeText(currentUrl.toString()).then(() => {
+      alert("Link do przepisu skopiowany.");
+    });
+  });
+</script>
+
 
 </body>
 </html>
