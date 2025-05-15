@@ -111,7 +111,7 @@ button:hover {
 
 /* Wyszukiwarka */
 input[type="text"] {
-  width: 100%;
+  width: 95%;
   padding: 0.75rem;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -138,7 +138,9 @@ li {
 }
 li a {
   text-decoration: none;
-  color: #007acc;
+  color: black;
+  border: 1px solid #007acc;
+  border-radius: 8px;
 }
 li a:hover {
   text-decoration: underline;
