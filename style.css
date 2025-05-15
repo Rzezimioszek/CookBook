@@ -95,7 +95,7 @@ button:hover {
 
 /* Planer posiłków */
 #mealPlanner {
-  background: #fff3d6;
+  background: #fff;
   border-radius: 12px;
   padding: 1rem;
   margin-top: 2rem;
@@ -106,12 +106,13 @@ button:hover {
   margin-right: 1rem;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
 }
 
 /* Wyszukiwarka */
 input[type="text"] {
-  width: 95%;
+  width: 100%;
   padding: 0.75rem;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -139,11 +140,9 @@ li {
 li a {
   text-decoration: none;
   color: black;
-  border: 1px solid #007acc;
-  border-radius: 8px;
 }
 li a:hover {
-  text-decoration: underline;
+  text-decoration: bold;
 }
 
 /* Overlay (jeśli chcesz go później użyć np. przy plannerze) */
