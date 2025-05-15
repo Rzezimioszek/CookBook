@@ -61,7 +61,6 @@ main {
 
 /* Przyciski */
 button {
-  margin-top: 2rem;
   padding: 0.6em 1.2em;
   border: 1px solid #005e99;
   background-color: black;
