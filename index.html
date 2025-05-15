@@ -54,10 +54,16 @@ days.forEach(day => {
   div.innerHTML = `<strong>${day}:</strong> <span id="slot-${day}">—</span>`;
   div.onclick = () => {
     if (selectedRecipe.title) {
-      const repeat = confirm("Czy chcesz zaplanować ten posiłek na 2 dni?");
-      mealPlan[day] = { title: selectedRecipe.title, days: repeat ? 2 : 1 };
-      updatePlannerUI();
-    } else {
+  const repeat = confirm("Czy chcesz zaplanować ten posiłek na 2 dni?");
+  const currentIndex = days.indexOf(day);
+  mealPlan[day] = { title: selectedRecipe.title, days: 1 };
+  if (repeat && currentIndex < days.length - 1) {
+    const nextDay = days[currentIndex + 1];
+    mealPlan[nextDay] = { title: selectedRecipe.title, days: 1 };
+  }
+  updatePlannerUI();
+}
+ else {
       alert("Najpierw wybierz przepis.");
     }
   };
@@ -125,12 +131,46 @@ fetch("recipes.json")
   .then(data => {
     allRecipes = data;
     renderRecipeList(data);
+    const urlParams = new URLSearchParams(window.location.search);
+    const titleParam = decodeURIComponent(urlParams.get("title") || "");
+    const categoryParam = decodeURIComponent(urlParams.get("category") || "");
+
+    if (titleParam && categoryParam) {
+      const matchedCategory = data.find(cat => cat.category === categoryParam);
+      if (matchedCategory) {
+        const matchedRecipe = matchedCategory.recipes.find(r => r.title === titleParam);
+        if (matchedRecipe) {
+          loadRecipe(matchedRecipe.path, matchedRecipe.title, matchedCategory.category);}
   })
   .catch(error => {
     console.error("Problem loading recipes:", error);
     recipeList.innerHTML = `<p style="color: red">Nie można załadować przepisów: ${error.message}</p>
                            <p>Sprawdź czy plik "recipes.json" istnieje w tym samym folderze co ten plik HTML.</p>`;
   });
+
+  function loadRecipe(path, title, category) {
+  fetch(path)
+    .then(res => {
+      if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
+      return res.text();
+    })
+    .then(md => {
+      selectedRecipe.title = title;
+      preview.innerHTML = marked.parse(md);
+      exportBtn.style.display = "inline-block";
+      sidePanel.classList.remove("open");
+
+      // Aktualizacja URL
+      const newUrl = new URL(window.location.href);
+      newUrl.searchParams.set("category", encodeURIComponent(category));
+      newUrl.searchParams.set("title", encodeURIComponent(title));
+      history.pushState(null, "", newUrl);
+    })
+    .catch(error => {
+      preview.innerHTML = `<p style="color: red">Nie można załadować przepisu: ${error.message}</p>`;
+    });
+}
+
 
 function renderRecipeList(data) {
   recipeList.innerHTML = "";
@@ -148,6 +188,7 @@ function renderRecipeList(data) {
       a.textContent = recipe.title;
       a.onclick = (e) => {
         e.preventDefault();
+        loadRecipe(recipe.path, recipe.title, cat.category);
         fetch(recipe.path)
           .then(res => {
             if (!res.ok) {
