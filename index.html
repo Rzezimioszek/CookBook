@@ -140,7 +140,7 @@ fetch("recipes.json")
       if (matchedCategory) {
         const matchedRecipe = matchedCategory.recipes.find(r => r.title === titleParam);
         if (matchedRecipe) {
-          loadRecipe(matchedRecipe.path, matchedRecipe.title, matchedCategory.category);}
+          loadRecipe(matchedRecipe.path, matchedRecipe.title, matchedCategory.category);}}}
   })
   .catch(error => {
     console.error("Problem loading recipes:", error);

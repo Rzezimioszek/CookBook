@@ -5,15 +5,22 @@ body {
   padding: 0;
   background: #f7f9fb;
   color: #2d2d2d;
+  overflow-x: hidden;
 }
 
 /* Nagłówek */
 header {
-  background-color: white;
-  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60px;
+  background: white;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 1rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 header h1 {
@@ -29,7 +36,7 @@ header h1 {
 
 /* Główna treść */
 main {
-  padding: 2rem;
+  padding-top: 70px; /* przestrzeń pod nagłówkiem */
   max-width: 800px;
   margin: auto;
 }
@@ -147,3 +154,24 @@ li a:hover {
 .overlay.active {
   display: block;
 }
+
+aside#sidePanel,
+aside#plannerPanel {
+  position: fixed;
+  top: 60px; /* wysokość nagłówka */
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  background: white;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+}
+
+aside#sidePanel.open,
+aside#plannerPanel.open {
+  transform: translateX(0);
+}
+
