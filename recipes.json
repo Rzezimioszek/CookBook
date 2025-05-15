@@ -65,12 +65,28 @@
         "path": "przepisy/Obiadowe/Duszone burgery z dorsza dla niemowlaka.md"
       },
       {
+        "title": "Fasolka Szparagowa",
+        "path": "przepisy/Obiadowe/Fasolka szparagowa.md"
+      },
+      {
         "title": "Gulasz Z Indyka",
         "path": "przepisy/Obiadowe/Gulasz z indyka.md"
       },
       {
+        "title": "Hot Wings",
+        "path": "przepisy/Obiadowe/Hot wings.md"
+      },
+      {
         "title": "Kacze Piersi Pieczone W Miodzie",
         "path": "przepisy/Obiadowe/Kacze piersi pieczone w miodzie.md"
+      },
+      {
+        "title": "Kanapka Drwala",
+        "path": "przepisy/Obiadowe/Kanapka drwala.md"
+      },
+      {
+        "title": "Kebab Wołowy",
+        "path": "przepisy/Obiadowe/Kebab wołowy.md"
       },
       {
         "title": "Kotlety Mielone",
@@ -107,6 +123,10 @@
       {
         "title": "Makaron Z Kurczakiem, Cukinią I Fetą",
         "path": "przepisy/Obiadowe/Makaron z kurczakiem, cukinią i fetą.md"
+      },
+      {
+        "title": "Makaron Z Łososiem",
+        "path": "przepisy/Obiadowe/Makaron z łososiem.md"
       },
       {
         "title": "Mintaj Pieczony",
@@ -151,6 +171,10 @@
       {
         "title": "Żeberka W Miodzie",
         "path": "przepisy/Obiadowe/Żeberka w miodzie.md"
+      },
+      {
+        "title": "Żurek",
+        "path": "przepisy/Obiadowe/Żurek.md"
       }
     ]
   },
