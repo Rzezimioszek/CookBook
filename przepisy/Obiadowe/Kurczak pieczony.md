@@ -2,7 +2,13 @@
 - kurczak surowy 1,7 kg
 - łyżka soli i pół łyżeczki pieprzu
 - 2 łyżeczki słodkiej papryki
-- łyżka oleju np. ryżowego lub masła
+- łyżka oliwy
+- 4 ząbki czosnku
+- suszony tymianek
+## Warzywne dodatki
+- ziemniaki 🥔
+- marchewka 🥕
+- cebula 🧅
 
 ![Kurczak](https://cdn.aniagotuje.com/pictures/articles/2015/12/644982-v-1080x1080.jpg)
 
@@ -17,6 +23,10 @@ Kurczaka nałóż na grilla, zamiast stojaka można użyć szklanej butelki. Dod
 Do brytwanki można dodać warzywa z którymi będzie podawane mięso, np. ziemniaki pokrojone w paski.
 
 Piecz łącznie 1,5 godziny, co 20 minut podlewając go sosem wyciekającym na podstawkę. Jeśli nie masz pipety - użyj łyżki lub małej łyki wazowej.
+
+Na ostatnie 20 minut zwiększ temperaturę do 220 stopni, możesz też zmienić tryb na termoobieg.
+
+Po upieczeniu odstaw kurczaka na co najmniej 10 minut.
 ## Inne wagi kurczaka i czas pieczenia:
 - 1 kg - 1 h
 - 1,5 kg - 1 h 20 min
