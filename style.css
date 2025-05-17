@@ -312,6 +312,7 @@ header img.logo {
 }
 
 #recipeTitle {
-  font-size: 2em;
+  font-size: 3em;
   margin-left: 0.5em;
+  font-weight: bold;
 }
