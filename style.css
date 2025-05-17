@@ -36,6 +36,7 @@ header h1 {
   border-radius: 8px;
   cursor: pointer;
   padding: 2px 2px;
+  margin: 0;
 }
 
 /* Główna treść */
@@ -70,6 +71,7 @@ button {
   cursor: pointer;
   font-weight: bold;
   transition: background 0.3s;
+  margin: 1rem;
 }
 button:hover {
   background-color: #005e99;
