@@ -38,6 +38,7 @@
 
 
 <main>
+  <h2 id="recipeTitle"></h2>
   <div id="preview"></div>
   <div style="justify-content: center; margin: 5px;">
     <button id="exportPdfBtn" style="display:none">Eksportuj do PDF</button>
@@ -161,6 +162,7 @@ fetch("recipes.json")
     })
     .then(md => {
       selectedRecipe.title = title;
+      document.getElementById('recipeTitle').textContent = title;
       preview.innerHTML = marked.parse(md);
       exportBtn.style.display = "inline-block";
       copyTextBtn.style.display = "inline-block";
