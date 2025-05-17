@@ -300,7 +300,7 @@ aside#plannerPanel.open {
   }
 
   input[type="text"] {
-    width: 240px;
+    width: 220px;
     margin: 5px;
   }
 }
