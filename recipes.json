@@ -65,12 +65,28 @@
         "path": "przepisy/Obiadowe/Duszone burgery z dorsza dla niemowlaka.md"
       },
       {
+        "title": "Fasolka Szparagowa",
+        "path": "przepisy/Obiadowe/Fasolka szparagowa.md"
+      },
+      {
         "title": "Gulasz Z Indyka",
         "path": "przepisy/Obiadowe/Gulasz z indyka.md"
       },
       {
+        "title": "Hot Wings",
+        "path": "przepisy/Obiadowe/Hot wings.md"
+      },
+      {
         "title": "Kacze Piersi Pieczone W Miodzie",
         "path": "przepisy/Obiadowe/Kacze piersi pieczone w miodzie.md"
+      },
+      {
+        "title": "Kanapka Drwala",
+        "path": "przepisy/Obiadowe/Kanapka drwala.md"
+      },
+      {
+        "title": "Kebab Wołowy",
+        "path": "przepisy/Obiadowe/Kebab wołowy.md"
       },
       {
         "title": "Kotlety Mielone",
@@ -83,6 +99,10 @@
       {
         "title": "Kurczak Pałki W Musztardzie",
         "path": "przepisy/Obiadowe/Kurczak pałki w musztardzie.md"
+      },
+      {
+        "title": "Kurczak Pieczony",
+        "path": "przepisy/Obiadowe/Kurczak pieczony.md"
       },
       {
         "title": "Kurczak Po Koreańsku",
@@ -109,6 +129,10 @@
         "path": "przepisy/Obiadowe/Makaron z kurczakiem, cukinią i fetą.md"
       },
       {
+        "title": "Makaron Z Łososiem",
+        "path": "przepisy/Obiadowe/Makaron z łososiem.md"
+      },
+      {
         "title": "Mintaj Pieczony",
         "path": "przepisy/Obiadowe/Mintaj pieczony.md"
       },
@@ -129,10 +153,6 @@
         "path": "przepisy/Obiadowe/Pstrąg pieczony z ziołami.md"
       },
       {
-        "title": "Racuchy Z Jabłkami (bez Mleka)",
-        "path": "przepisy/Obiadowe/Racuchy z jabłkami (bez mleka).md"
-      },
-      {
         "title": "Risotto Z Kurczakiem",
         "path": "przepisy/Obiadowe/Risotto z kurczakiem.md"
       },
@@ -151,6 +171,10 @@
       {
         "title": "Żeberka W Miodzie",
         "path": "przepisy/Obiadowe/Żeberka w miodzie.md"
+      },
+      {
+        "title": "Żurek",
+        "path": "przepisy/Obiadowe/Żurek.md"
       }
     ]
   },
@@ -181,6 +205,10 @@
       {
         "title": "Pancake Jagodowe",
         "path": "przepisy/Śniadaniowe/Pancake jagodowe.md"
+      },
+      {
+        "title": "Racuchy Z Jabłkami (bez Mleka)",
+        "path": "przepisy/Śniadaniowe/Racuchy z jabłkami (bez mleka).md"
       }
     ]
   }
