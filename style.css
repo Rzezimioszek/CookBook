@@ -3,7 +3,7 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f7f9fb;
+  background: white;
   color: #2d2d2d;
   overflow-x: hidden;
 }
@@ -245,6 +245,11 @@ aside#plannerPanel.open {
   gap: 0.5rem;
 }
 
+#recipeTitle {
+  font-size: 2em;
+  margin-left: 0.5em;
+  font-weight: bold;
+}
 
 /* Desktop – stały boczny panel kategorii */
 @media (min-width: 1200px) {
@@ -284,6 +289,12 @@ aside#plannerPanel.open {
   .overlay {
     display: none !important;
   }
+
+  #recipeTitle {
+    font-size: 3em;
+    margin-left: 0.5em;
+    font-weight: bold;
+  }
 }
 
 /* Logo w nagłówku */
@@ -311,8 +322,3 @@ header img.logo {
   margin-bottom: 0.5em;
 }
 
-#recipeTitle {
-  font-size: 3em;
-  margin-left: 0.5em;
-  font-weight: bold;
-}
