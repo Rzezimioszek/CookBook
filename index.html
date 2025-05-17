@@ -165,6 +165,7 @@ fetch("recipes.json")
     })
     .then(md => {
       selectedRecipe.title = title;
+      selectedRecipe.category = category;
       document.getElementById('recipeTitle').textContent = title;
       preview.innerHTML = marked.parse(md);
       exportBtn.style.display = "inline-block";
