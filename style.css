@@ -246,7 +246,7 @@ aside#plannerPanel.open {
 /* Desktop – stały boczny panel kategorii */
 @media (min-width: 1200px) {
 
-  #sidePanel {
+  aside#sidePanel {
     position: static;
     transform: none;
     width: 250px;
