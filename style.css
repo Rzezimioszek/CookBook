@@ -1,9 +1,5 @@
 /* Ogólne */
 body {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 20px;
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
