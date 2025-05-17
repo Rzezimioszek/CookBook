@@ -28,7 +28,7 @@ header h1 {
   font-size: 1.5rem;
 }
 #burgerBtn, #plannerBtn {
-  background: black;
+  background: #005e99;
   height: 48px;
   width: 48px;
   border: 1px solid #005e99;
@@ -64,7 +64,7 @@ main {
 button {
   padding: 0.6em 1.2em;
   border: 1px solid #005e99;
-  background-color: black;
+  background-color: #005e99;
   color: #fff;
   border-radius: 8px;
   cursor: pointer;
@@ -288,4 +288,26 @@ header img.logo {
   height: 40px;
   width: auto;
   margin-left: 0.5rem;
+}
+
+/* Preview */
+#preview ul, #preview ol {
+  padding-left: 1.5em;
+  margin: 1em 0;
+}
+
+#preview ul {
+  list-style-type: disc;
+}
+
+#preview ol {
+  list-style-type: decimal;
+}
+
+#preview li {
+  margin-bottom: 0.5em;
+}
+
+#recipeTitle {
+  margin-left: 0.5em;
 }
