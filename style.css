@@ -135,6 +135,7 @@ summary {
 }
 li {
   list-style: none;
+  list-style-type: disc;
   margin: 0.3em;
 }
 li a {
