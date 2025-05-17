@@ -1,3 +1,4 @@
+![Kurczak](https://cdn.aniagotuje.com/pictures/articles/2015/12/644982-v-1080x1080.jpg)
 # Składniki
 - kurczak surowy 1,7 kg
 - łyżka soli i pół łyżeczki pieprzu
@@ -9,8 +10,6 @@
 - ziemniaki 🥔
 - marchewka 🥕
 - cebula 🧅
-
-![Kurczak](https://cdn.aniagotuje.com/pictures/articles/2015/12/644982-v-1080x1080.jpg)
 
 [Link](https://aniagotuje.pl/przepis/kurczak-pieczony-najprostszy)
 # Przygotowanie
