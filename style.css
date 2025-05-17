@@ -19,7 +19,7 @@ header {
   z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 0 1rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -267,6 +267,7 @@ aside#plannerPanel.open {
   main {
     display: flex;
     height: calc(100vh - 60px);
+    max-width: none;
   }
 
   #burgerBtn {
