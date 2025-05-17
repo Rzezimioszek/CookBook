@@ -117,12 +117,11 @@ button:hover {
 
 /* Wyszukiwarka */
 input[type="text"] {
-  width: 100%;
+  width: auto;
   padding: 0.75rem;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 12px;
-  margin: 1rem;
 }
 
 /* Lista kategorii */
