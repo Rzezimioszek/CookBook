@@ -19,7 +19,7 @@ header {
   z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0 1rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
