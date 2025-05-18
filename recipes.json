@@ -153,6 +153,10 @@
         "path": "przepisy/Obiadowe/Pstrąg pieczony z ziołami.md"
       },
       {
+        "title": "Pstrąg Z Limonką (azja)",
+        "path": "przepisy/Obiadowe/Pstrąg z limonką (Azja).md"
+      },
+      {
         "title": "Risotto Z Kurczakiem",
         "path": "przepisy/Obiadowe/Risotto z kurczakiem.md"
       },
@@ -205,6 +209,10 @@
       {
         "title": "Pancake Jagodowe",
         "path": "przepisy/Śniadaniowe/Pancake jagodowe.md"
+      },
+      {
+        "title": "Pasta Z Makreli",
+        "path": "przepisy/Śniadaniowe/Pasta z makreli.md"
       },
       {
         "title": "Racuchy Z Jabłkami (bez Mleka)",
