@@ -16,4 +16,4 @@
 5. Zawiń luźno w folię aluminiową lub piecz luzem w naczyniu żaroodpornym.
 6. Piecz przez 20–25 minut, a na koniec możesz rozwinąć i podpiec 5 minut pod górną grzałką.
 
-___Z czym podać?__ Świetnie smakuje z ryżem jaśminowym i sałatką z ogórka, limonki i miętą
+___Z czym podać?__ Świetnie smakuje z ryżem jaśminowym i sałatką z ogórka, limonki i miętą_
