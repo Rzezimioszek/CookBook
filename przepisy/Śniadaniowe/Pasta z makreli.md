@@ -1,4 +1,5 @@
 ![pasta](https://cdn.aniagotuje.com/pictures/articles/2019/10/1324095-v-1500x1500.jpg)
+[Źródło](https://aniagotuje.pl/przepis/szybka-pasta-z-wedzonej-makreli)
 # Składniki
 - Składniki
 - 1 duża wędzona makrela - około 350 g4 jajka ugotowane na twardo - 215 g
@@ -8,7 +9,6 @@
 - łyżeczka musztardy
 - garść siekanego szczypiorku
 - szczypta pieprzu
-[Przepis na podstawie](https://aniagotuje.pl/przepis/szybka-pasta-z-wedzonej-makreli)
 # Przygotowanie
 Makrelę umieść na desce przy dobrym oświetleniu. Podziel ją na dwie części i usuń ogon i głowę. Zdejmij cały kręgosłup z ośćmi. Odrywaj kawałki mięsa sprawdzając jednocześnie, czy nie zostały jeszcze małe ości. Oczyszczone kawałki makreli odkładaj na talerz i rozdrabniaj widelcem jeszcze raz przeglądając mięso. Skórkę z ryby wyrzuć razem z ogonem, głową i ośćmi. 
 
