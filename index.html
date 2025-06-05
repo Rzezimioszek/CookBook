@@ -49,8 +49,29 @@
       <button id="copyLinkBtn" style="display:none">Kopiuj link</button>
       <button id="installBtn" style="display: none;">Zainstaluj aplikację</button>
     </div>
-  </div>
+  </div> 
 </main>
+
+<script>
+  let deferredPrompt;
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+
+    const btn = document.getElementById('installBtn');
+    btn.style.display = 'block';
+
+    btn.addEventListener('click', () => {
+      btn.style.display = 'none';
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then((choiceResult) => {
+        console.log('Instalacja:', choiceResult.outcome);
+        deferredPrompt = null;
+      });
+    });
+  });
+</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
@@ -303,26 +324,7 @@ document.getElementById("exportPdfBtn").addEventListener("click", async () => {
     });
   });
 </script>
-<script>
-  let deferredPrompt;
 
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-
-    const btn = document.getElementById('installBtn');
-    btn.style.display = 'block';
-
-    btn.addEventListener('click', () => {
-      btn.style.display = 'none';
-      deferredPrompt.prompt();
-      deferredPrompt.userChoice.then((choiceResult) => {
-        console.log('Instalacja:', choiceResult.outcome);
-        deferredPrompt = null;
-      });
-    });
-  });
-</script>
 
 
 
