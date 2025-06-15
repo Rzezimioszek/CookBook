@@ -16,7 +16,7 @@
   <header>
     <!--<button id="plannerBtn">📅</button>-->
     <!--<img src="favicon.png" alt="CookBook" width="60" height="60">-->
-    <h1>CookBook</h1>
+    <h1 id="siteTitle">CookBook</h1>
     <!--<div class="toolbar">-->
 	  <button id="burgerBtn">☰</button>
     <!--</div>-->
@@ -257,6 +257,24 @@ document.getElementById("exportPdfBtn").addEventListener("click", async () => {
     });
   });
 </script>
+<script>
+  const siteTitle = document.getElementById('siteTitle');
+  const recipeTitle = document.getElementById('recipeTitle');
+  const originalTitle = siteTitle.textContent;
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        siteTitle.textContent = originalTitle;
+      } else {
+        siteTitle.textContent = recipeTitle.textContent;
+      }
+    });
+  }, { threshold: 0 });
+
+  observer.observe(recipeTitle);
+</script>
+
 
 
 
