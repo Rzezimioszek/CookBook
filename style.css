@@ -334,4 +334,30 @@ header img.logo {
   transition: opacity 0.3s ease;
 }
 
+.recipe-card {
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+.recipe-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.recipe-card img {
+  max-height: 500px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
 

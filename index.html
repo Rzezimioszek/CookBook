@@ -16,13 +16,13 @@
   <header>
     <!--<button id="plannerBtn">📅</button>-->
     <!--<img src="favicon.png" alt="CookBook" width="60" height="60">-->
-    <h1 id="siteTitle">CookBook</h1>
+    <a href="index.html"><h1 id="siteTitle">CookBook</h1></a>
     <!--<div class="toolbar">-->
 	  <button id="burgerBtn">☰</button>
     <!--</div>-->
   </header>
-  
 
+  <div id="suggestedRecipes" style=" margin-top: 60px; display: inline;" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4"></div>
 
 <!-- Panel z plannerem -->
 <aside id="plannerPanel">
@@ -76,7 +76,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-  <script>
+<script>
   // Add this code to replace your existing fetch script
 const recipeList = document.getElementById("recipeList");
 const searchInput = document.getElementById("search");
@@ -139,6 +139,70 @@ fetch("recipes.json")
       preview.innerHTML = `<p style="color: red">Nie można załadować przepisu: ${error.message}</p>`;
     });
 }
+
+async function fetchAllRecipes() {
+  const res = await fetch('recipes.json');
+  const data = await res.json();
+
+  // Spłaszcz wszystkie przepisy w jednej tablicy
+  const allRecipes = data.flatMap(category =>
+    category.recipes.map(recipe => ({
+      ...recipe,
+      category: category.category
+    }))
+  );
+
+  return allRecipes;
+}
+
+async function showRandomRecipes(count = 3) {
+  const allRecipes = await fetchAllRecipes();
+  const shuffled = allRecipes.sort(() => 0.5 - Math.random());
+  const selected = shuffled.slice(0, count);
+
+  const container = document.getElementById('suggestedRecipes');
+  if (!container) return;
+  container.innerHTML = '';
+
+  for (const recipe of selected) {
+    const card = document.createElement('div');
+    card.className = 'recipe-card';
+
+    let imageHTML = '';
+
+    try {
+      const res = await fetch(recipe.path);
+      const text = await res.text();
+
+      const match = text.match(/!\[.*?\]\((.*?)\)/);
+      if (match) {
+        const imageUrl = match[1];
+        imageHTML = `<img src="${imageUrl}" alt="${recipe.title}" class="w-full h-40 object-cover rounded-t-xl mb-2">`;
+      }
+    } catch (e) {
+      console.warn('Błąd przy ładowaniu pliku MD:', recipe.path);
+    }
+
+    card.innerHTML = `
+      <a href="?category=${encodeURIComponent(recipe.category)}&title=${encodeURIComponent(recipe.title)}">
+        ${imageHTML}
+        <h3 class="text-lg font-semibold text-center p-2">${recipe.title}</h3>
+      </a>
+    `;
+
+    container.appendChild(card);
+  }
+}
+
+
+// Sprawdź czy nie ma aktywnego przepisu w URL
+const params = new URLSearchParams(window.location.search);
+if (!params.has('title') && !params.has('recipe')) {
+  showRandomRecipes(3);
+}
+
+
+
 
 
 function renderRecipeList(data) {
