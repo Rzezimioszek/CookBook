@@ -22,7 +22,7 @@
     <!--</div>-->
   </header>
 
-  <div id="suggestedRecipes" style=" margin-top: 60px; display: inline;" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4"></div>
+  <div id="suggestedRecipes" class="suggestedRecipes"></div>
 
 <!-- Panel z plannerem -->
 <aside id="plannerPanel">
@@ -164,6 +164,10 @@ async function showRandomRecipes(count = 3) {
   if (!container) return;
   container.innerHTML = '';
 
+  /*const cardTitle = document.createElement('div');
+  cardTitle.innerHTML = `<h3 style= 'padding-top: 60px; width: 100%;'>Sugerowane przepisy</h3>`;
+  container.appendChild(cardTitle);*/
+
   for (const recipe of selected) {
     const card = document.createElement('div');
     card.className = 'recipe-card';
@@ -198,7 +202,7 @@ async function showRandomRecipes(count = 3) {
 // Sprawdź czy nie ma aktywnego przepisu w URL
 const params = new URLSearchParams(window.location.search);
 if (!params.has('title') && !params.has('recipe')) {
-  showRandomRecipes(3);
+  showRandomRecipes(6);
 }
 
 
