@@ -134,6 +134,8 @@ fetch("recipes.json")
       newUrl.searchParams.set("category", encodeURIComponent(category));
       newUrl.searchParams.set("title", encodeURIComponent(title));
       history.pushState(null, "", newUrl);
+      document.getElementById('suggestedRecipes').display = 'none';
+
     })
     .catch(error => {
       preview.innerHTML = `<p style="color: red">Nie można załadować przepisu: ${error.message}</p>`;
@@ -196,6 +198,8 @@ async function showRandomRecipes(count = 3) {
 
     container.appendChild(card);
   }
+  //document.getElementById('siteTitle').textContent = 'Sugerowane przepisy';
+  //document.getElementById('preview').display = 'none';
 }
 
 
@@ -336,6 +340,9 @@ document.getElementById("exportPdfBtn").addEventListener("click", async () => {
         siteTitle.textContent = originalTitle;
       } else {
         siteTitle.textContent = recipeTitle.textContent;
+        if (recipeTitle.textContent === ''){
+          siteTitle.textContent = 'Sugerowane przepisy';
+        }
       }
     });
   }, { threshold: 0 });
