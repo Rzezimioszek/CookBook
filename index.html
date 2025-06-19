@@ -12,28 +12,11 @@
 </head>
 <body>
   <div class="overlay" id="overlay"></div>
-
   <header>
-    <!--<button id="plannerBtn">📅</button>-->
-    <!--<img src="favicon.png" alt="CookBook" width="60" height="60">-->
     <a href="index.html"><h1 id="siteTitle">CookBook</h1></a>
-    <!--<div class="toolbar">-->
 	  <button id="burgerBtn">☰</button>
-    <!--</div>-->
   </header>
-
   <div id="suggestedRecipes" class="suggestedRecipes"></div>
-
-<!-- Panel z plannerem -->
-<aside id="plannerPanel">
-  <section id="mealPlanner">
-    <h2>Plan posiłków</h2>
-    <div id="days"></div>
-    <button id="exportBtn">Eksportuj do Google Kalendarza</button>
-  </section>
-</aside>
-
-
 <main>
     <!-- Panel z przepisami -->
 <aside id="sidePanel">
@@ -134,7 +117,8 @@ fetch("recipes.json")
       newUrl.searchParams.set("category", encodeURIComponent(category));
       newUrl.searchParams.set("title", encodeURIComponent(title));
       history.pushState(null, "", newUrl);
-      document.getElementById('suggestedRecipes').display = 'none';
+      //document.getElementById('suggestedRecipes').display = 'none';
+      document.getElementById('suggestedRecipes').innerHTML = '';
 
     })
     .catch(error => {
@@ -175,6 +159,7 @@ async function showRandomRecipes(count = 3) {
     card.className = 'recipe-card';
 
     let imageHTML = '';
+    let imageUrl = 'dish.jpeg';
 
     try {
       const res = await fetch(recipe.path);
@@ -182,18 +167,29 @@ async function showRandomRecipes(count = 3) {
 
       const match = text.match(/!\[.*?\]\((.*?)\)/);
       if (match) {
-        const imageUrl = match[1];
+        imageUrl = match[1]; // np. /img/placeholder.jpg
         imageHTML = `<img src="${imageUrl}" alt="${recipe.title}" class="w-full h-40 object-cover rounded-t-xl mb-2">`;
-      }
+      } 
+      
     } catch (e) {
       console.warn('Błąd przy ładowaniu pliku MD:', recipe.path);
     }
 
-    card.innerHTML = `
+    /*card.innerHTML = `
       <a href="?category=${encodeURIComponent(recipe.category)}&title=${encodeURIComponent(recipe.title)}">
         ${imageHTML}
         <h3 class="text-lg font-semibold text-center p-2">${recipe.title}</h3>
       </a>
+    `;*/
+    //console.log('url: ', imageUrl, imageHTML);
+
+    card.innerHTML = `
+    <a href="?category=${encodeURIComponent(recipe.category)}&title=${encodeURIComponent(recipe.title)}">
+        <div class="recipe-image" style="background-image: url('${imageUrl}')">
+          <h3 class="recipe-title"'>${recipe.title}</h3>
+        </div>
+      </a>
+      
     `;
 
     container.appendChild(card);
@@ -269,7 +265,9 @@ searchInput.addEventListener("input", () => {
 </script>
 <script>
 document.getElementById("exportPdfBtn").addEventListener("click", async () => {
-    const { jsPDF } = window.jspdf;
+  window.print();
+  
+  /*const { jsPDF } = window.jspdf;
 
     const preview = document.getElementById("preview");
     const pdf = new jsPDF("p", "mm", "a4");
@@ -286,7 +284,7 @@ document.getElementById("exportPdfBtn").addEventListener("click", async () => {
 
       pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
       pdf.save(`${selectedRecipe.title || "przepis"}.pdf`);
-    });
+    });*/
   });
 </script>
 
