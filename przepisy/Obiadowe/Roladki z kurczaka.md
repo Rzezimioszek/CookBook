@@ -1,3 +1,4 @@
+![Źródło](https://cdn.aniagotuje.com/pictures/articles/2022/12/36483982-v-1080x1508.jpg)
 # Składniki
 - 1 duża pierś z kurczaka (dwa filety) - około 700 g
 - 3 opakowania boczku surowego wędzonego Sokołów
@@ -8,7 +9,6 @@
 - 1 łyżeczka masła - około 5 g
 - 2 łyżki oliwy lub innego oleju do smażenia
 - szczypta świeżo mielonego pieprzu
-![](https://cdn.aniagotuje.com/pictures/articles/2022/12/36483982-v-1080x1508.jpg)
 # Przygotowanie
 ## Mięso 
 Przygotuj sobie jedną, całą pierś z kurczaka (dwa większe filety). Filety oczyść z ewentualnych żyłek i pokrój na osiem płaskich i w miarę możliwości kształtnych kotletów.

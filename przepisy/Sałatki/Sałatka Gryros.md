@@ -1,3 +1,5 @@
+![gyros](https://cdn.aniagotuje.com/pictures/articles/2024/11/70941186-v-1500x1500.jpg)
+[Źródło](https://aniagotuje.pl/przepis/salatka-gyros)
 # Składniki
 ## kurczak Gyros
 - 2 średnie piersi z kurczaka - około 800 g
@@ -17,9 +19,6 @@
 - 150 g pomidorów koktajlowych
 - 150 g ogórka świeżego
 - 4 łyżki ketchupu
-[Przepis](https://aniagotuje.pl/przepis/salatka-gyros)
-
-![gyros](https://cdn.aniagotuje.com/pictures/articles/2024/11/70941186-v-1500x1500.jpg)
 # Przygotowanie
 ## Krok 1: Przygotuj kurczaka
 Zacznij o przygotowania piersi z kurczaka do smażenia. Piersi osusz ręcznikiem papierowym i usuń ewentualne włókna i chrząstki. Oczyszczone piersi z kurczaka pokrój w kawałki "na jeden kęs". Pokrojone w kawałki mięso obtocz dokładnie w przyprawie gyros. Możesz użyć gotowej mieszanki ze sklepu o wadze łącznej około 30 gramów lub skomponować własną przyprawę gyros. Przyprawa gyros: sól, czosnek suszony, kolendra młotkowana, mielone ziarna gorczycy, sodka i ostra papryka, rozmaryn, oregano, tymianek, pieprz, kozieradka. 

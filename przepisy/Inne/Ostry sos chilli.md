@@ -1,3 +1,4 @@
+![Sos ostry](https://bedziepieklo.pl/upload/bedziepieklo/images/2024-10-17_2_5e.png)
 # Składniki
 - 10-12 świeżych czerwonych papryczek chili (np. cayenne, habanero, jalapeño, lub ostrzejszych)
 - 3 ząbki czosnku, posiekane
@@ -7,8 +8,6 @@
 - 1/2 szklanki wody
 - Sok z 1 limonki
 - 1 łyżeczka wędzonej papryki (dla dymnego smaku)
-
-![Sos ostry](https://bedziepieklo.pl/upload/bedziepieklo/images/2024-10-17_2_5e.png)
 # Przygotowanie
 ## Przygotowanie papryczek
 Usuń szypułki z papryczek chili. Jeśli chcesz, żeby sos był nieco łagodniejszy, usuń także nasiona i białe błony wewnątrz owoców. Posiekaj papryczki na małe, 1-2cm kawałki.

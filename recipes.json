@@ -11,6 +11,10 @@
         "path": "przepisy/Ciasta/Chlebek Bananowy bez glutenowy.md"
       },
       {
+        "title": "Ciasto Z Truskawkami",
+        "path": "przepisy/Ciasta/Ciasto z truskawkami.md"
+      },
+      {
         "title": "Kopiec Kreta",
         "path": "przepisy/Ciasta/Kopiec kreta.md"
       },
@@ -35,6 +39,10 @@
   {
     "category": "Inne",
     "recipes": [
+      {
+        "title": "Ciasteczka Owsiane (bez Glutenu)",
+        "path": "przepisy/Inne/Ciasteczka owsiane (bez glutenu).md"
+      },
       {
         "title": "Ostry Sos Chilli",
         "path": "przepisy/Inne/Ostry sos chilli.md"

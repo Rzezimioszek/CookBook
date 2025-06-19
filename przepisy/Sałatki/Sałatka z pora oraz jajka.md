@@ -1,3 +1,4 @@
+![Gotowa salatka](https://cdn.aniagotuje.com/pictures/articles/2021/04/13828602-v-1080x1391.jpg)
 # Składniki
  - biała część pora - 15 cm = 100 g
  - 4 jajka ugotowane na twardo -  200 g
@@ -15,8 +16,6 @@
  - szczypiorek
  - koperek
  - natka pietruszki
-
-![Gotowa salatka](https://cdn.aniagotuje.com/pictures/articles/2021/04/13828602-v-1080x1391.jpg)
 # Przygotowanie
 ## Jajka
 Zacznij od ugotowania jajek na twardo. Duże lub średniej wielkości jajka powinny się ugotować w około dziewięć do dziesięciu minut. Po ugotowaniu zalej je zimną wodą, a następnie obierz i pokrój na duże kawałki.

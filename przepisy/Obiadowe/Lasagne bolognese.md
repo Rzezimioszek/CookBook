@@ -1,3 +1,4 @@
+[Źródło](https://www.canalpluskuchnia.pl/przepisy/lasagne-bolognese)
 # Składniki
 - 200 g makaronu lasagne (ze sklepu) 
 - 400-800 g mielonego mięsa wołowo-wieprzowego 
@@ -22,5 +23,3 @@ Przygotowujemy sos beszamelowy: rozpuszczamy masło, dodajemy 2 łyżki mąki, d
 Płaty makaronu układamy w brytfance lub naczyniu żaroodpornym posmarowanym oliwą. Na makaron kładziemy trochę sera, potem sos bolognese, sos beszamelowy, ser, ponownie układamy płaty makaronu itd., aż do wyczerpania składników. Ostatnią warstwę makaronu przykrywamy sosem beszamelowym i posypujemy obficie tartym serem.
 ## Pieczenie
 Lasagne wkładamy do piekarnika nagrzanego do 180-200ºC, pieczemy ok 40 minut. Przepis na lasagne, z którego m.in. słynie kuchnia włoska, jest dość czasochłonny, ale wart zachodu!
-
-[Źródło](https://www.canalpluskuchnia.pl/przepisy/lasagne-bolognese)

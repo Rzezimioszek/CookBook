@@ -1,3 +1,4 @@
+![Salatka](https://cdn.aniagotuje.com/pictures/articles/2021/11/21737763-v-1080x1434.jpg)
 # Składniki
  - 2 średnie sałaty rzymskie
  - pół długiej bagietki pszennej
@@ -13,8 +14,6 @@
  - 4 łyżki drobno tartego parmezanu - około 35 g
 
 ___Ewentualne dodatki:__ szczypta pieprzu oraz czerwony ocet winny_
-
-![Salatka](https://cdn.aniagotuje.com/pictures/articles/2021/11/21737763-v-1080x1434.jpg)
 # Przygotowanie
 ## Sos
 Wymieszaj ze sobą wszystkie składniki na sos:

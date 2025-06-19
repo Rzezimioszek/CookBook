@@ -1,3 +1,4 @@
+![Sernik](https://cdn.aniagotuje.com/pictures/articles/2022/05/28124756-v-1080x1493.jpg)
 # Składniki
  - 1 kg twarogu tłustego lub półtłustego - może być z wiaderka
  - 6 średniej wielkości jajek
@@ -7,7 +8,6 @@
  - 2-3 krople olejku np. pomarańczowego lub waniliowego
  - 100 g dowolnych herbatników na spód - u mnie 14 sztuk
 
-![Sernik](https://cdn.aniagotuje.com/pictures/articles/2022/05/28124756-v-1080x1493.jpg)
 # Przygotowanie
 ## Herbatniki
 

@@ -1,3 +1,5 @@
+![Sernik](https://cdn.aniagotuje.com/pictures/articles/2022/06/29130484-v-1500x1500.jpg)
+[Przepis](https://aniagotuje.pl/przepis/sernik-na-zimno-z-twarogu)
 # Składniki
 ## Składniki na spód
 - 60 g dowolnych biszkoptów
@@ -11,9 +13,6 @@
 - 1 galaretka np. truskawkowa
 - 400 ml wrzątku
 - 500 g truskawek
-
-[Przepis](https://aniagotuje.pl/przepis/sernik-na-zimno-z-twarogu)
-![Sernik](https://cdn.aniagotuje.com/pictures/articles/2022/06/29130484-v-1500x1500.jpg)
 # Przygotowanie
 ## Krok 1: Przygotuj formę i biszkopty
 Przygotuj sobie formę na sernik. Użyłam tortownicy z ceramicznym spodem i sylikonowymi brzegami (średnica około 24 cm). Spodu nie wyłożyłam papierem do pieczenia, ale można to zrobić. Ranty wyłóż od wewnątrz wyższymi paskami papieru do pieczenia. Pamiętaj o tym, że kawałki pergaminu będą się trzymać wewnętrznych rantów formy, jeśli formę od środka wysmarujesz najpierw np. masłem. Na dno wyłóż okrągłe biszkopty. Jeśli masz kwadratową formę, to warto sięgnąć po biszkopty podłużne lub też maślane herbatniki (petitki LU są idealne, ponieważ są kruche i nie będą twarde). 
