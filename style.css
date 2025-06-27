@@ -465,3 +465,81 @@ a:link {
     width: 100%;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1f1f1f;
+    color: #f0f0f0;
+  }
+
+  header {
+    background: #1f1f1f;
+  }
+
+  #preview {
+    background: #1f1f1f;
+  }
+
+  button {
+    border: 1px solid #005e99;
+    background-color: #1f1f1f;
+    color: #ffffff;
+  }
+  button:hover {
+    background-color: #005e99;
+    color: #ffffff;
+  }
+
+  #sidePanel, #plannerPanel {
+    background: #1f1f1f;
+  }
+
+  aside#sidePanel,
+aside#plannerPanel {
+  background: #1f1f1f;
+}
+
+
+/* Lista kategorii */
+details {
+  border: 1px solid #000000;
+  border-radius: 1rem;
+  background: #1f1f1f;
+  color: #ffffff;
+}
+
+li {
+  color: #ffffff;
+}
+
+li a {
+  color: #ffffff;
+}
+
+a:link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+li a:hover {
+  text-decoration: #005e99;
+}
+
+.recipe-card {
+  background: #1f1f1f;
+  border: 2px solid #000000;
+}
+
+.recipe-card:hover {
+  color: #000000;
+}
+
+header h1 {
+  color: #ffffff;
+}
+
+input[type="text"] {
+  background-color: #2d2d2d;
+}
+
+}
