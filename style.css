@@ -13,13 +13,14 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: calc(100vw - 1rem);
+  width: calc(100vw - 2rem);
   height: 60px;
   background: white;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-right: 1rem;
   padding-left: 1rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
