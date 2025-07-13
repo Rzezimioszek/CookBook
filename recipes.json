@@ -40,6 +40,10 @@
     "category": "Inne",
     "recipes": [
       {
+        "title": "Babeczki na jogurcie",
+        "path": "przepisy/Inne/Babeczki na jogurcie.md"
+      },
+      {
         "title": "Cebularz",
         "path": "przepisy/Inne/Cebularz.md"
       },
