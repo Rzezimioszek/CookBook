@@ -1,3 +1,4 @@
+![Devolay](https://i.ibb.co/p6VGhGZh/gpt-image-1-Devolay-z-frytkami-n.png)
 # Składniki
  - 4 pojedyncze filety z kurczaka - około 160 g sztuka
  - 80 g prawdziwego masła lub trochę mniej

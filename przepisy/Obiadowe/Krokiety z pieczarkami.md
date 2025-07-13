@@ -1,3 +1,4 @@
+![Krokiety](https://i.ibb.co/zWn8xVB3/gpt-image-1-3-krokiety-na-talerz.png)
 # Składniki
 ## Farsz do krokietów
 - pieczarki

@@ -1,3 +1,4 @@
+![Kuciak](https://i.ibb.co/5h3txNj2/gpt-image-1-Kurczak-po-korea-sku.png)
 # Składniki
 ## Kurczak w maślance
 - 1 podwójna pierś z kurczaka - do 600 g

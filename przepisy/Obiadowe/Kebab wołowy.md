@@ -1,3 +1,4 @@
+![Kebab](https://i.ibb.co/HTJPqDw1/gpt-image-1-Kebab-Craftowy-w-tor.png)
 # Składniki
 - 1 kg mięsa mielonego,
 - przyprawy do mięsa,

@@ -1,3 +1,4 @@
+![Pałki](https://i.ibb.co/vxNqLzvd/gpt-image-1-Pieczone-pa-ki-z-kur.png)
 # Składniki
  - 10 pałek z kurczaka:
 ## Marynata:

@@ -1,3 +1,4 @@
+![Kotlety mielone](https://i.ibb.co/67XJxNP8/imagen-4-0-ultra-generate-preview-06-06-Polskie-Kotlety-miel.png)
 # Składniki
  - 500 g łopatki wieprzowej
  - pół czerstwej kajzerki

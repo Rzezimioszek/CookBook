@@ -40,8 +40,16 @@
     "category": "Inne",
     "recipes": [
       {
+        "title": "Cebularz",
+        "path": "przepisy/Inne/Cebularz.md"
+      },
+      {
         "title": "Ciasteczka Owsiane (bez Glutenu)",
         "path": "przepisy/Inne/Ciasteczka owsiane (bez glutenu).md"
+      },
+      {
+        "title": "Kiszone Ogórki",
+        "path": "przepisy/Inne/Kiszone ogórki.md"
       },
       {
         "title": "Ostry Sos Chilli",

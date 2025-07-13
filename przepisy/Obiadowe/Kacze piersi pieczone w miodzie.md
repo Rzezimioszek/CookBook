@@ -1,3 +1,4 @@
+![Kaczka](https://i.ibb.co/353rcfQ6/gpt-image-1-Kacze-piersi-podsma.png)
 # Składniki
  - piersi z kaczki
  - miód 3 łyżki

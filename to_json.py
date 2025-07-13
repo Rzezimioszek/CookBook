@@ -3,6 +3,7 @@ import os
 import json
 import re
 
+import datetime
 
 def generate_recipes_json(base_directory='przepisy'):
     """
@@ -111,4 +112,5 @@ if __name__ == "__main__":
     base_dir = sys.argv[1] if len(sys.argv) > 1 else 'przepisy'
 
     print(f"Generowanie pliku recipes.json na podstawie folderu '{base_dir}'...")
+    print(datetime.date.today())
     generate_recipes_json(base_dir)

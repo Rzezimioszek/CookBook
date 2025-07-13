@@ -1,3 +1,4 @@
+![Dorsz](https://i.ibb.co/93W6KNSH/gpt-image-1-Pieczony-filet-z-dor.png)
 # Składniki
  - filety z dorsza np. polędwice - do 900 g
  - 3 ząbki czosnku

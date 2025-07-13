@@ -1,3 +1,4 @@
+![Polędwiczki](https://i.ibb.co/XffgDqLF/gpt-image-1-Make-my-picture-look.png)
 # Składniki
  - polędwiczka wieprzowa - 1 sztuka - 500 g
  - świeżo mielony pieprz - pół płaskiej łyżeczki

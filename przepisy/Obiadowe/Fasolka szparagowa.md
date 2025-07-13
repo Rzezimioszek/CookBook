@@ -1,3 +1,4 @@
+![Fasolka](https://i.ibb.co/ZRVSGyXK/gpt-image-1-ta-Fasolka-szpara.png)
 # Gotowanie
 Na kilogram żółtej fasolki szparagowej należy przygotować garnek z ok. 2 l wody. Płyn przyprawiamy 2 łyżeczkami soli i ewentualnie, dla lepszego smaku, 1 łyżeczką cukru.
 

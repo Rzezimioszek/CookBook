@@ -1,3 +1,4 @@
+![Hot wings](https://i.ibb.co/Sz4fJqS/gpt-image-1-Hot-wings-domowe-na.png)
 # Składniki
  - skrzydełka kurczaka 2 kg
  - Sól 2 łyżeczki

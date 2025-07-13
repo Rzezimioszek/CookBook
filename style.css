@@ -75,13 +75,18 @@ button:hover {
 }
 
 #burgerBtn, #plannerBtn {
-  background: #005e99;
+  /*background: #005e99;*/
+  color: #005e99;
   height: 48px;
   width: 48px;
   font-size: 12px;
   cursor: pointer;
   padding: 2px 2px;
   margin: 0;
+}
+
+a:visited {
+  color: #000000;
 }
 
 /* Panel boczny z przepisami i planner */
@@ -519,6 +524,10 @@ li a {
 
 a:link {
   text-decoration: none;
+  color: #ffffff;
+}
+
+a:visited {
   color: #ffffff;
 }
 

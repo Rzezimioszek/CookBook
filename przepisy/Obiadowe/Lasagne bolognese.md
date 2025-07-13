@@ -1,3 +1,4 @@
+![Lassagne](https://i.ibb.co/N2n6j80f/gpt-image-1-Kawa-ek-kwadratowy-L.png)
 [Źródło](https://www.canalpluskuchnia.pl/przepisy/lasagne-bolognese)
 # Składniki
 - 200 g makaronu lasagne (ze sklepu) 
