@@ -69,6 +69,10 @@
     "category": "Obiadowe",
     "recipes": [
       {
+        "title": "Barszcz czerwony - Fitka",
+        "path": "przepisy/Obiadowe/Barszcz czerwony - Fitka.md"
+      },
+      {
         "title": "Bitki Wołowe",
         "path": "przepisy/Obiadowe/Bitki wołowe.md"
       },
