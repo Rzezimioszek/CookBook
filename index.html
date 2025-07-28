@@ -21,7 +21,7 @@
     <!-- Panel z przepisami -->
 <aside id="sidePanel">
   <input type="text" id="search" placeholder="Wyszukaj przepis...">
-  <div id="recipeList"></div>
+  <div id="recipeList" style="padding-bottom: 64px;"></div>
 </aside>
   <div id="previewPanel">
     <h1 id="recipeTitle"></h1>
@@ -30,7 +30,7 @@
       <button id="exportPdfBtn" style="display:none">Eksportuj do PDF</button>
       <button id="copyTextBtn" style="display:none">Kopiuj przepis</button>
       <button id="copyLinkBtn" style="display:none">Kopiuj link</button>
-      <button id="addFav" style="display:none">Dodaj do ulubionych</button>
+      <button id="addFav" style="display:none">🤍</button>
       <button id="installBtn" style="display: none;">Zainstaluj aplikację</button>
     </div>
   </div>
@@ -38,7 +38,7 @@
   <!-- Dolny pasek -->
 <div id="bottomDock">
   <button onclick="toggleDrawer('recent')">🕘</button>
-  <button onclick="toggleDrawer('favorites')">⭐</button>
+  <button onclick="toggleDrawer('favorites')">🤍</button>
   <button id="burgerBtn">☰</button>
 </div>
 
@@ -142,6 +142,7 @@ fetch("recipes.json")
       document.getElementById('suggestedRecipes').innerHTML = '';
 
       addToRecentRecipes(selectedRecipe);
+      updateFavoriteIcon(title)
 
     })
     .catch(error => {
@@ -360,7 +361,7 @@ document.getElementById("exportPdfBtn").addEventListener("click", async () => {
 
   addFav.addEventListener("click", () => {
     toggleFavorite(selectedRecipe);
-    alert("Przepis dodany do ulubionych");
+    
   });
 
 </script>

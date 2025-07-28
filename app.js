@@ -126,12 +126,42 @@ function toggleFavorite(recipe) {
   const favorites = JSON.parse(localStorage.getItem('favoriteRecipes') || '[]');
 
   /*const exists = favorites.some(r => r.title !== recipe.title);*/
-  const exists = favorites.filter(r => r.title !== recipe.title);
-  exists.unshift(recipe);
-  const updated = exists
+  var exists = favorites.filter(r => r.title !== recipe.title);
+
+  const index = exists.findIndex(r => r.title !== recipe.title);
+  if (isRecipeFavorite(recipe.title)) {
+    // Usuń jeśli już istnieje
+    exists = favorites.filter(r => r.title !== recipe.title);
+    alert("Przepis usunięty z ulubionych");
+  } else {
+    // Dodaj nowy
+    exists.unshift(recipe);
+    alert("Przepis dodany do ulubionych");
+  }
+
+  
+  
+  /*const updated = exists
     ? favorites.filter(r => r.title !== recipe.title)
     : [...favorites, recipe];
-
+  */
   /*localStorage.setItem('favoriteRecipes', JSON.stringify(updated));*/
   localStorage.setItem('favoriteRecipes', JSON.stringify(exists));
+  updateFavoriteIcon(recipe.title);
+}
+
+function isRecipeFavorite(title) {
+  const favorites = JSON.parse(localStorage.getItem('favoriteRecipes')) || [];
+  return favorites.some(r => r.title === title);
+}
+
+function updateFavoriteIcon(title) {
+  const icon = document.getElementById('addFav');
+  if (!icon) return;
+
+  if (isRecipeFavorite(title)) {
+    icon.textContent = '❤️'; // w ulubionych
+  } else {
+    icon.textContent = '🤍'; // nie w ulubionych
+  }
 }

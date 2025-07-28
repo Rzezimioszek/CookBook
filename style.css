@@ -514,6 +514,7 @@ a:link {
   overflow-y: auto;
   transition: right 0.3s ease;
   z-index: 999;
+  padding-top: 60px;
 }
 
 .drawer.open {
