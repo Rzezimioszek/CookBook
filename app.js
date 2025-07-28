@@ -63,3 +63,75 @@ document.getElementById("exportBtn").onclick = () => {
     }
   }
 };
+
+function toggleDrawer(type) {
+  const recent = document.getElementById('drawerRecent');
+  const favorites = document.getElementById('drawerFavorites');
+
+  if (type === 'recent') {
+    favorites.classList.remove('open');
+    recent.classList.toggle('open');
+  } else {
+    recent.classList.remove('open');
+    favorites.classList.toggle('open');
+  }
+
+  displayStoredRecipes(); // aktualizuj zawartość
+}
+
+function displayStoredRecipes() {
+  const recent = JSON.parse(localStorage.getItem('recentRecipes') || '[]');
+  const favorites = JSON.parse(localStorage.getItem('favoriteRecipes') || '[]');
+
+  const recentContainer = document.getElementById('recentRecipes');
+  const favContainer = document.getElementById('favoriteRecipes');
+
+  recentContainer.innerHTML = '';
+  for (const recipe of recent) {
+
+    const el = document.createElement('a');
+    el.href = `?category=${encodeURIComponent(recipe.category)}&title=${encodeURIComponent(recipe.title)}`;
+    el.textContent = `* ${recipe.title}\n`;
+    const di = document.createElement('div');
+    di.appendChild(el)
+    recentContainer.appendChild(di);
+  }
+
+  favContainer.innerHTML = '';
+  for (const recipe of favorites) {
+    const el = document.createElement('a');
+    el.href = `?category=${encodeURIComponent(recipe.category)}&title=${encodeURIComponent(recipe.title)}`;
+    el.textContent = `* ${recipe.title}\n`;
+    const di = document.createElement('div');
+    di.appendChild(el)
+    favContainer.appendChild(di);
+  }
+}
+
+
+function addToRecentRecipes(recipe) {
+  const stored = JSON.parse(localStorage.getItem('recentRecipes') || '[]');
+  
+  // Usuń jeśli już istnieje
+  const filtered = stored.filter(r => r.title !== recipe.title);
+  // Dodaj na początek
+  filtered.unshift(recipe);
+  // Maksymalnie 5
+  const updated = filtered.slice(0, 5);
+
+  localStorage.setItem('recentRecipes', JSON.stringify(updated));
+}
+
+function toggleFavorite(recipe) {
+  const favorites = JSON.parse(localStorage.getItem('favoriteRecipes') || '[]');
+
+  /*const exists = favorites.some(r => r.title !== recipe.title);*/
+  const exists = favorites.filter(r => r.title !== recipe.title);
+  exists.unshift(recipe);
+  const updated = exists
+    ? favorites.filter(r => r.title !== recipe.title)
+    : [...favorites, recipe];
+
+  /*localStorage.setItem('favoriteRecipes', JSON.stringify(updated));*/
+  localStorage.setItem('favoriteRecipes', JSON.stringify(exists));
+}

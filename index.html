@@ -14,7 +14,7 @@
   <div class="overlay" id="overlay"></div>
   <header>
     <a href="index.html"><h1 id="siteTitle">CookBook</h1></a>
-	  <button id="burgerBtn">☰</button>
+	  <!--<button id="burgerBtn">☰</button>-->
   </header>
   <div id="suggestedRecipes" class="suggestedRecipes"></div>
 <main>
@@ -26,13 +26,33 @@
   <div id="previewPanel">
     <h1 id="recipeTitle"></h1>
     <div id="preview"></div>
-    <div style="justify-content: space-around;" width="100%">
+    <div style="justify-content: space-around; padding-bottom: 64px;" width="100%">
       <button id="exportPdfBtn" style="display:none">Eksportuj do PDF</button>
       <button id="copyTextBtn" style="display:none">Kopiuj przepis</button>
       <button id="copyLinkBtn" style="display:none">Kopiuj link</button>
+      <button id="addFav" style="display:none">Dodaj do ulubionych</button>
       <button id="installBtn" style="display: none;">Zainstaluj aplikację</button>
     </div>
-  </div> 
+  </div>
+  
+  <!-- Dolny pasek -->
+<div id="bottomDock">
+  <button onclick="toggleDrawer('recent')">🕘</button>
+  <button onclick="toggleDrawer('favorites')">⭐</button>
+  <button id="burgerBtn">☰</button>
+</div>
+
+<!-- Szufladki -->
+<div id="drawerRecent" class="drawer">
+  <h3>Ostatnio oglądane</h3>
+  <div id="recentRecipes"></div>
+</div>
+
+<div id="drawerFavorites" class="drawer">
+  <h3>Ulubione przepisy</h3>
+  <div id="favoriteRecipes"></div>
+</div>
+
 </main>
 <script src="app.js"></script>
 
@@ -110,6 +130,7 @@ fetch("recipes.json")
       exportBtn.style.display = "inline-block";
       copyTextBtn.style.display = "inline-block";
       copyLinkBtn.style.display = "inline-block";
+      addFav.style.display = "inline-block";
       sidePanel.classList.remove("open");
 
       // Aktualizacja URL
@@ -120,10 +141,14 @@ fetch("recipes.json")
       //document.getElementById('suggestedRecipes').display = 'none';
       document.getElementById('suggestedRecipes').innerHTML = '';
 
+      addToRecentRecipes(selectedRecipe);
+
     })
     .catch(error => {
       preview.innerHTML = `<p style="color: red">Nie można załadować przepisu: ${error.message}</p>`;
     });
+
+    
 }
 
 async function fetchAllRecipes() {
@@ -263,6 +288,7 @@ searchInput.addEventListener("input", () => {
   renderRecipeList(filtered);
 });
 </script>
+
 <script>
 document.getElementById("exportPdfBtn").addEventListener("click", async () => {
   window.print();
@@ -305,6 +331,7 @@ document.getElementById("exportPdfBtn").addEventListener("click", async () => {
     sidePanel.classList.remove("open");
   });
 </script>
+
 <script>
   const copyTextBtn = document.getElementById("copyTextBtn");
   const copyLinkBtn = document.getElementById("copyLinkBtn");
@@ -327,6 +354,17 @@ document.getElementById("exportPdfBtn").addEventListener("click", async () => {
     });
   });
 </script>
+
+<script>
+  const addFav = document.getElementById("addFav");
+
+  addFav.addEventListener("click", () => {
+    toggleFavorite(selectedRecipe);
+    alert("Przepis dodany do ulubionych");
+  });
+
+</script>
+
 <script>
   const siteTitle = document.getElementById('siteTitle');
   const recipeTitle = document.getElementById('recipeTitle');
@@ -347,10 +385,6 @@ document.getElementById("exportPdfBtn").addEventListener("click", async () => {
 
   observer.observe(recipeTitle);
 </script>
-
-
-
-
 
 </body>
 </html>
