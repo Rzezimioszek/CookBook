@@ -478,7 +478,7 @@ a:link {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 52px;
+  height: 32px;
   background: #ffffff;
   border-top: 1px solid #ccc;
   display: flex;
@@ -493,14 +493,22 @@ a:link {
   border: none;
   background: #005e99;*/
   border: none;
-  color: #000000;
-  height: 48px;
-  width: 48px;
+  color: #555555;
+  height: 32px;
+  width: 32px;
   font-size: 24px;
   cursor: pointer;
   padding: 2px 2px;
   margin: 0;
 }
+
+#bottomDock button:hover {
+  background: none;
+  border: none;
+  border: none;
+  color: #000000;
+}
+
 
 .drawer {
   position: fixed;
@@ -623,8 +631,8 @@ input[type="text"] {
 }
 
 #addFav, #exportPdfBtn, #copyTextBtn, #copyLinkBtn {
-  width: 48px;
-  height: 48px;
+  width: 32px;
+  height: 32px;
   border: none;
   padding: 2px;
   color: #005e99;
