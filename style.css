@@ -492,7 +492,8 @@ a:link {
   /*background: none;
   border: none;
   background: #005e99;*/
-  color: #005e99;
+  border: none;
+  color: #000000;
   height: 48px;
   width: 48px;
   font-size: 24px;
@@ -545,10 +546,7 @@ a:link {
     background-color: #1f1f1f;
     color: #ffffff;
   }
-  button:hover {
-    background-color: #005e99;
-    color: #ffffff;
-  }
+"
 
   #sidePanel, #plannerPanel {
     background: #1f1f1f;
@@ -614,7 +612,7 @@ input[type="text"] {
 }
 
 #bottomDock button {
-  color: #005e99;
+  color: #ffffff;
 }
 
 .drawer {
@@ -624,3 +622,15 @@ input[type="text"] {
 
 }
 
+#addFav, #exportPdfBtn, #copyTextBtn, #copyLinkBtn {
+  width: 48px;
+  height: 48px;
+  border: none;
+  padding: 2px;
+  color: #005e99;
+}
+
+#addFav:hover, #exportPdfBtn:hover, #copyTextBtn:hover, #copyLinkBtn:hover {
+    background-color: #005e99;
+    color: #ffffff;
+  }
