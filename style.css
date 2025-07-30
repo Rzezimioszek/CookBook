@@ -351,7 +351,7 @@ header img.logo {
 
 .recipe-card {
   background: #ffffff;
-  border: 2px solid #ccc;
+  /*border: 2px solid #ccc;*/
   border-radius: 1rem;
   text-align: center;
   transition: box-shadow 0.2s;
@@ -364,7 +364,7 @@ header img.logo {
 
 .recipe-card:hover {
   background: #005e99;
-  border: 2px solid #005e99;
+  /*border: 2px solid #005e99;*/
   color: #ffffff;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
