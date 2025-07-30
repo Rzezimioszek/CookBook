@@ -505,7 +505,6 @@ a:link {
 #bottomDock button:hover {
   background: none;
   border: none;
-  border: none;
   color: #000000;
 }
 
@@ -523,7 +522,8 @@ a:link {
   overflow-y: auto;
   transition: right 0.3s ease;
   z-index: 999;
-  padding-top: 60px;
+  padding-top: 64px;
+  padding-bot: 32px;
 }
 
 .drawer.open {
@@ -532,6 +532,24 @@ a:link {
 
 .drawer h3 {
   margin-top: 0;
+}
+
+#favoriteRecipes div, #recentRecipes div {
+  /*color: red;*/
+  /*background-color: blue;*/
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid #005e99;
+  border-radius: 1rem;
+}
+
+#favoriteRecipes, #recentRecipes{
+  height: 100%;
+}
+
+#favoriteRecipes div:hover, #recentRecipes div:hover {
+  background-color: #005e99;
+  color: #f0f0f0;
 }
 
 
@@ -554,7 +572,7 @@ a:link {
     background-color: #1f1f1f;
     color: #ffffff;
   }
-"
+
 
   #sidePanel, #plannerPanel {
     background: #1f1f1f;
@@ -620,6 +638,13 @@ input[type="text"] {
 }
 
 #bottomDock button {
+  color: #555555;
+}
+
+#bottomDock button:hover {
+  background: none;
+  border: none;
+  border: none;
   color: #ffffff;
 }
 
@@ -627,8 +652,8 @@ input[type="text"] {
   background: #1f1f1f;
   box-shadow: -2px 0 5px rgba(0,0,0,0.3);
 }
-
 }
+
 
 #addFav, #exportPdfBtn, #copyTextBtn, #copyLinkBtn {
   width: 32px;
@@ -641,4 +666,4 @@ input[type="text"] {
 #addFav:hover, #exportPdfBtn:hover, #copyTextBtn:hover, #copyLinkBtn:hover {
     background-color: #005e99;
     color: #ffffff;
-  }
+}

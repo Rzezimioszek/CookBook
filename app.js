@@ -91,7 +91,7 @@ function displayStoredRecipes() {
 
     const el = document.createElement('a');
     el.href = `?category=${encodeURIComponent(recipe.category)}&title=${encodeURIComponent(recipe.title)}`;
-    el.textContent = `* ${recipe.title}\n`;
+    el.textContent = `${recipe.title}\n`;
     const di = document.createElement('div');
     di.appendChild(el)
     recentContainer.appendChild(di);
@@ -101,7 +101,7 @@ function displayStoredRecipes() {
   for (const recipe of favorites) {
     const el = document.createElement('a');
     el.href = `?category=${encodeURIComponent(recipe.category)}&title=${encodeURIComponent(recipe.title)}`;
-    el.textContent = `* ${recipe.title}\n`;
+    el.textContent = `${recipe.title}\n`;
     const di = document.createElement('div');
     di.appendChild(el)
     favContainer.appendChild(di);
@@ -116,8 +116,8 @@ function addToRecentRecipes(recipe) {
   const filtered = stored.filter(r => r.title !== recipe.title);
   // Dodaj na początek
   filtered.unshift(recipe);
-  // Maksymalnie 5
-  const updated = filtered.slice(0, 5);
+  // Maksymalnie 10
+  const updated = filtered.slice(0,10);
 
   localStorage.setItem('recentRecipes', JSON.stringify(updated));
 }
