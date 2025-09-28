@@ -40,13 +40,12 @@
     "category": "Inne",
     "recipes": [
       {
-        "title": "Babeczki na jogurcie",
+        "title": "Babeczki Na Jogurcie",
         "path": "przepisy/Inne/Babeczki na jogurcie.md"
       },
       {
-        "title": "Budyń domowy",
+        "title": "Budyń Domowy",
         "path": "przepisy/Inne/Budyń domowy.md"
-        
       },
       {
         "title": "Cebularz",
@@ -74,7 +73,7 @@
     "category": "Obiadowe",
     "recipes": [
       {
-        "title": "Barszcz czerwony - Fitka",
+        "title": "Barszcz Czerwony Fitka",
         "path": "przepisy/Obiadowe/Barszcz czerwony - Fitka.md"
       },
       {
@@ -178,8 +177,16 @@
         "path": "przepisy/Obiadowe/Pasztet drobiowy rosołowy.md"
       },
       {
+        "title": "Pizza Neapolitańska",
+        "path": "przepisy/Obiadowe/Pizza neapolitańska.md"
+      },
+      {
         "title": "Placki Ziemniaczane Z Tzatziki",
         "path": "przepisy/Obiadowe/Placki ziemniaczane z tzatziki.md"
+      },
+      {
+        "title": "Polędwica Cygańska",
+        "path": "przepisy/Obiadowe/Polędwica Cygańska.md"
       },
       {
         "title": "Polędwiczki W Sosie Musztardowym",
@@ -214,8 +221,16 @@
         "path": "przepisy/Obiadowe/Schabowy duszony.md"
       },
       {
+        "title": "Stir Fry",
+        "path": "przepisy/Obiadowe/Stir-fry.md"
+      },
+      {
         "title": "Szaszłyki Wołowe",
         "path": "przepisy/Obiadowe/Szaszłyki wołowe.md"
+      },
+      {
+        "title": "Zupa Dyniowa",
+        "path": "przepisy/Obiadowe/Zupa dyniowa.md"
       },
       {
         "title": "Żeberka W Miodzie",
