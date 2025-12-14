@@ -27,6 +27,10 @@
         "path": "przepisy/Ciasta/Sernik na herbatnikach.md"
       },
       {
+        "title": "Sernik Na Zimno Z Jogurtu Kokosowego Greckiego",
+        "path": "przepisy/Ciasta/Sernik na zimno z jogurtu kokosowego greckiego.md"
+      },
+      {
         "title": "Sernik Na Zimno",
         "path": "przepisy/Ciasta/Sernik na zimno.md"
       },
@@ -50,6 +54,10 @@
       {
         "title": "Cebularz",
         "path": "przepisy/Inne/Cebularz.md"
+      },
+      {
+        "title": "Ciasteczka Bezglutenowe Z Mąki Owsianej",
+        "path": "przepisy/Inne/Ciasteczka bezglutenowe z mąki owsianej.md"
       },
       {
         "title": "Ciasteczka Owsiane (bez Glutenu)",
@@ -123,6 +131,10 @@
       {
         "title": "Krokiety Z Pieczarkami",
         "path": "przepisy/Obiadowe/Krokiety z pieczarkami.md"
+      },
+      {
+        "title": "Kruche Paszteciki Z Czerwoną Soczewicą (pieczone)",
+        "path": "przepisy/Obiadowe/Kruche Paszteciki z Czerwoną Soczewicą (Pieczone).md"
       },
       {
         "title": "Kurczak Pałki W Musztardzie",
@@ -209,6 +221,10 @@
         "path": "przepisy/Obiadowe/Risotto z kurczakiem.md"
       },
       {
+        "title": "Roladki Z Indyka Z Morelą (danie Główne)",
+        "path": "przepisy/Obiadowe/Roladki z Indyka z Morelą (Danie Główne).md"
+      },
+      {
         "title": "Roladki Z Kurczaka",
         "path": "przepisy/Obiadowe/Roladki z kurczaka.md"
       },
@@ -229,8 +245,16 @@
         "path": "przepisy/Obiadowe/Szaszłyki wołowe.md"
       },
       {
+        "title": "Uszka Z Indykiem (do Barszczu)",
+        "path": "przepisy/Obiadowe/Uszka z Indykiem (Do barszczu).md"
+      },
+      {
         "title": "Zupa Dyniowa",
         "path": "przepisy/Obiadowe/Zupa dyniowa.md"
+      },
+      {
+        "title": "Żeberka W Marynacie Pomidorowo Miodowej",
+        "path": "przepisy/Obiadowe/Żeberka w marynacie pomidorowo-miodowej.md"
       },
       {
         "title": "Żeberka W Miodzie",
