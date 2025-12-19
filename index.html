@@ -56,12 +56,12 @@
   
   <!-- Dolny pasek -->
 <div id="bottomDock">
-  <button onclick="toggleDrawer('recent')"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+  <!--<button onclick="toggleDrawer('recent')"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
      stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
      viewBox="0 0 24 24">
   <circle cx="12" cy="12" r="10" />
   <polyline points="12 6 12 12 16 14" />
-</svg></button>
+</svg></button>-->
   <button onclick="toggleDrawer('favorites')"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-500" fill="currentColor" viewBox="0 0 24 24">
         <path fill-rule="evenodd" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 
         8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 
@@ -161,6 +161,7 @@ fetch("recipes.json")
     .then(md => {
       selectedRecipe.title = title;
       selectedRecipe.category = category;
+      selectedRecipe.path = path;
       document.getElementById('recipeTitle').textContent = title;
       preview.innerHTML = marked.parse(md);
       exportBtn.style.display = "block";
@@ -204,16 +205,17 @@ async function fetchAllRecipes() {
 }
 
 async function showRandomRecipes(count = 3) {
-  const allRecipes = await fetchAllRecipes();
-  const shuffled = allRecipes.sort(() => 0.5 - Math.random());
-  const selected = shuffled.slice(0, count);
+  
+  const allRecent = JSON.parse(localStorage.getItem('recentRecipes') || '[]');
+  
+  const selected = allRecent.slice(0, count);
 
   const container = document.getElementById('suggestedRecipes');
   if (!container) return;
   container.innerHTML = '';
 
   /*const cardTitle = document.createElement('div');
-  cardTitle.innerHTML = `<h3 style= 'padding-top: 60px; width: 100%;'>Sugerowane przepisy</h3>`;
+  cardTitle.innerHTML = `<h3 style= 'padding-top: 60px; width: 100%;'>Ostatnie przepisy</h3>`;
   container.appendChild(cardTitle);*/
 
   for (const recipe of selected) {
