@@ -1,4 +1,4 @@
-
+![paszteciki](https://i.ibb.co/hRDpjNnP/1766307543859.png)
 Ilość: ok. 20–25 małych pasztecików.
 # Skladniki
 ## Składniki na ciasto:
