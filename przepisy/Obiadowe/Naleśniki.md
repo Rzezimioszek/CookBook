@@ -1,4 +1,4 @@
-![naleśniki(https://i.ibb.co/MxRTWyM0/1766315411893.png)
+![naleśniki](https://i.ibb.co/MxRTWyM0/1766315411893.png)
 # Składniki
  - 1 pełna szklanka i 2 łyżki mąki - 230 g
  - 3 średnie jajka - około 165 g po rozbiciu
