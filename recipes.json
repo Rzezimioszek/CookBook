@@ -72,6 +72,10 @@
         "path": "przepisy/Inne/Ostry sos chilli.md"
       },
       {
+        "title": "Pączki Batatowe",
+        "path": "przepisy/Inne/Pączki Batatowe.md"
+      },
+      {
         "title": "Syrop Z Cebuli",
         "path": "przepisy/Inne/Syrop z cebuli.md"
       }
@@ -87,6 +91,10 @@
       {
         "title": "Bitki Wołowe",
         "path": "przepisy/Obiadowe/Bitki wołowe.md"
+      },
+      {
+        "title": "Curry Mango Z Kurczaka",
+        "path": "przepisy/Obiadowe/Curry Mango z kurczaka.md"
       },
       {
         "title": "Devolay",
@@ -187,6 +195,10 @@
       {
         "title": "Pasztet Drobiowy Rosołowy",
         "path": "przepisy/Obiadowe/Pasztet drobiowy rosołowy.md"
+      },
+      {
+        "title": "Pieczone Udka Z Kurczaka W Cytrynie I Tymianku Z Batatami",
+        "path": "przepisy/Obiadowe/Pieczone udka z kurczaka w cytrynie i tymianku z batatami.md"
       },
       {
         "title": "Pizza Neapolitańska",
