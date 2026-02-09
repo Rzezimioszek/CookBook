@@ -7,423 +7,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <link rel="manifest" href="manifest.json" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="overlay" id="overlay"></div>
   <header>
     <a href="index.html"><h1 id="siteTitle">CookBook</h1></a>
-	  <!--<button id="burgerBtn">☰</button>-->
   </header>
-  <div id="suggestedRecipes" class="suggestedRecipes"></div>
-<main>
-    <!-- Panel z przepisami -->
-<aside id="sidePanel">
-  <input type="text" id="search" placeholder="Wyszukaj przepis...">
-  <div id="recipeList" style="padding-bottom: 64px;"></div>
-</aside>
-  <div id="previewPanel">
-    <h1 id="recipeTitle"></h1>
-    <div id="preview"></div>
-    <div style="justify-content: space-around; padding-bottom: 64px; align-items: center; display: flex;" width="100%">
-      <button id="exportPdfBtn" style="display:none">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
-     stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-     viewBox="0 0 24 24">
-  <path d="M6 9V2h12v7" />
-  <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
-  <rect x="6" y="14" width="12" height="8" />
-</svg></button>
-      <button id="copyTextBtn" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
-     stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-     viewBox="0 0 24 24">
-  <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
-  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-</svg></button>
-      <button id="copyLinkBtn" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
-     stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-     viewBox="0 0 24 24">
-  <path d="M10 13a5 5 0 0 0 7.1 0l1.4-1.4a5 5 0 1 0-7.1-7.1L10 5" />
-  <path d="M14 11a5 5 0 0 0-7.1 0l-1.4 1.4a5 5 0 0 0 7.1 7.1L14 19" />
-</svg></button>
-      <button id="addFav" style="display:none">
-      <span id="favIcon"></span>
-        </button>
-      <button id="installBtn" style="display: none;">Zainstaluj aplikację</button>
-    </div>
-  </div>
-  
-  <!-- Dolny pasek -->
-<div id="bottomDock">
-  <!--<button onclick="toggleDrawer('recent')"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-     stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-     viewBox="0 0 24 24">
-  <circle cx="12" cy="12" r="10" />
-  <polyline points="12 6 12 12 16 14" />
-</svg></button>-->
-  <button onclick="toggleDrawer('favorites')"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-500" fill="currentColor" viewBox="0 0 24 24">
-        <path fill-rule="evenodd" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 
-        8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 
-        4.5 2.09C13.09 3.81 14.76 3 16.5 3 
-        19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 
-        11.54L12 21.35z" clip-rule="evenodd"/>
-      </svg></button>
-  <button id="burgerBtn"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill="none"
-     stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-     viewBox="0 0 24 24">
-  <line x1="3" y1="6" x2="21" y2="6" />
-  <line x1="3" y1="12" x2="21" y2="12" />
-  <line x1="3" y1="18" x2="21" y2="18" />
-</svg></button>
-</div>
 
-<!-- Szufladki -->
-<div id="drawerRecent" class="drawer">
-  <h3>Ostatnio oglądane</h3>
-  <div id="recentRecipes"></div>
-</div>
+  <main>
+    <!-- Side Panel -->
+    <aside id="sidePanel">
+      <input type="text" id="search" placeholder="Wyszukaj przepis...">
+      <div id="recipeList"></div>
+    </aside>
 
-<div id="drawerFavorites" class="drawer">
-  <h3>Ulubione przepisy</h3>
-  <div id="favoriteRecipes"></div>
-</div>
-
-</main>
-<script src="app.js"></script>
-
-<script>
-  let deferredPrompt;
-
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-
-    const btn = document.getElementById('installBtn');
-    btn.style.display = 'block';
-
-    btn.addEventListener('click', () => {
-      btn.style.display = 'none';
-      deferredPrompt.prompt();
-      deferredPrompt.userChoice.then((choiceResult) => {
-        console.log('Instalacja:', choiceResult.outcome);
-        deferredPrompt = null;
-      });
-    });
-  });
-</script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script>
-  // Add this code to replace your existing fetch script
-const recipeList = document.getElementById("recipeList");
-const searchInput = document.getElementById("search");
-const preview = document.getElementById("preview");
-const exportBtn = document.getElementById("exportPdfBtn");
-
-let allRecipes = [];
-
-// Add error handling to your fetch request
-fetch("recipes.json")
-  .then(res => {
-    if (!res.ok) {
-      throw new Error(`HTTP error! Status: ${res.status}`);
-    }
-    return res.json();
-  })
-  .then(data => {
-    allRecipes = data;
-    renderRecipeList(data);
-    const urlParams = new URLSearchParams(window.location.search);
-    const titleParam = decodeURIComponent(urlParams.get("title") || "");
-    const categoryParam = decodeURIComponent(urlParams.get("category") || "");
-
-    if (titleParam && categoryParam) {
-      const matchedCategory = data.find(cat => cat.category === categoryParam);
-      if (matchedCategory) {
-        const matchedRecipe = matchedCategory.recipes.find(r => r.title === titleParam);
-        if (matchedRecipe) {
-          loadRecipe(matchedRecipe.path, matchedRecipe.title, matchedCategory.category);}}}
-  })
-  .catch(error => {
-    console.error("Problem loading recipes:", error);
-    recipeList.innerHTML = `<p style="color: red">Nie można załadować przepisów: ${error.message}</p>
-                           <p>Sprawdź czy plik "recipes.json" istnieje w tym samym folderze co ten plik HTML.</p>`;
-  });
-
-  function loadRecipe(path, title, category) {
-  fetch(path)
-    .then(res => {
-      if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
-      return res.text();
-    })
-    .then(md => {
-      selectedRecipe.title = title;
-      selectedRecipe.category = category;
-      selectedRecipe.path = path;
-      document.getElementById('recipeTitle').textContent = title;
-      preview.innerHTML = marked.parse(md);
-      exportBtn.style.display = "block";
-      copyTextBtn.style.display = "block";
-      copyLinkBtn.style.display = "block";
-      addFav.style.display = "block";
-      sidePanel.classList.remove("open");
-
-      // Aktualizacja URL
-      const newUrl = new URL(window.location.href);
-      newUrl.searchParams.set("category", encodeURIComponent(category));
-      newUrl.searchParams.set("title", encodeURIComponent(title));
-      history.pushState(null, "", newUrl);
-      //document.getElementById('suggestedRecipes').display = 'none';
-      document.getElementById('suggestedRecipes').innerHTML = '';
-
-      addToRecentRecipes(selectedRecipe);
-      updateFavoriteIcon(title)
-
-    })
-    .catch(error => {
-      preview.innerHTML = `<p style="color: red">Nie można załadować przepisu: ${error.message}</p>`;
-    });
-
-    
-}
-
-async function fetchAllRecipes() {
-  const res = await fetch('recipes.json');
-  const data = await res.json();
-
-  // Spłaszcz wszystkie przepisy w jednej tablicy
-  const allRecipes = data.flatMap(category =>
-    category.recipes.map(recipe => ({
-      ...recipe,
-      category: category.category
-    }))
-  );
-
-  return allRecipes;
-}
-
-async function showRandomRecipes(count = 3) {
-  
-  const allRecent = JSON.parse(localStorage.getItem('recentRecipes') || '[]');
-  
-  const selected = allRecent.slice(0, count);
-
-  const container = document.getElementById('suggestedRecipes');
-  if (!container) return;
-  container.innerHTML = '';
-
-  /*const cardTitle = document.createElement('div');
-  cardTitle.innerHTML = `<h3 style= 'padding-top: 60px; width: 100%;'>Ostatnie przepisy</h3>`;
-  container.appendChild(cardTitle);*/
-
-  for (const recipe of selected) {
-    const card = document.createElement('div');
-    card.className = 'recipe-card';
-
-    let imageHTML = '';
-    let imageUrl = 'dish.jpeg';
-
-    try {
-      const res = await fetch(recipe.path);
-      const text = await res.text();
-
-      const match = text.match(/!\[.*?\]\((.*?)\)/);
-      if (match) {
-        imageUrl = match[1]; // np. /img/placeholder.jpg
-        imageHTML = `<img src="${imageUrl}" alt="${recipe.title}" class="w-full h-40 object-cover rounded-t-xl mb-2">`;
-      } 
+    <!-- Content Area -->
+    <div id="contentArea">
+      <div id="suggestedRecipes" class="suggestedRecipes"></div>
       
-    } catch (e) {
-      console.warn('Błąd przy ładowaniu pliku MD:', recipe.path);
-    }
-
-    /*card.innerHTML = `
-      <a href="?category=${encodeURIComponent(recipe.category)}&title=${encodeURIComponent(recipe.title)}">
-        ${imageHTML}
-        <h3 class="text-lg font-semibold text-center p-2">${recipe.title}</h3>
-      </a>
-    `;*/
-    //console.log('url: ', imageUrl, imageHTML);
-
-    card.innerHTML = `
-    <a href="?category=${encodeURIComponent(recipe.category)}&title=${encodeURIComponent(recipe.title)}">
-        <div class="recipe-image" style="background-image: url('${imageUrl}')">
-          <h3 class="recipe-title"'>${recipe.title}</h3>
+      <div id="previewPanel">
+        <h1 id="recipeTitle"></h1>
+        <div id="preview"></div>
+        
+        <!-- Recipe Actions -->
+        <div class="recipe-actions">
+          <button id="exportPdfBtn" title="Drukuj / PDF" style="display:none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          </button>
+          <button id="copyTextBtn" title="Kopiuj tekst" style="display:none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          </button>
+          <button id="copyLinkBtn" title="Kopiuj link" style="display:none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.1 0l1.4-1.4a5 5 0 1 0-7.1-7.1L10 5"/><path d="M14 11a5 5 0 0 0-7.1 0l-1.4 1.4a5 5 0 0 0 7.1 7.1L14 19"/></svg>
+          </button>
+          <button id="addFav" title="Ulubione" style="display:none">
+            <span id="favIcon"></span>
+          </button>
+          <button id="installBtn" style="display: none;">Zainstaluj</button>
         </div>
-      </a>
-      
-    `;
-
-    container.appendChild(card);
-  }
-  //document.getElementById('siteTitle').textContent = 'Ostatnie przepisy';
-  //document.getElementById('preview').display = 'none';
-}
-
-
-// Sprawdź czy nie ma aktywnego przepisu w URL
-const params = new URLSearchParams(window.location.search);
-if (!params.has('title') && !params.has('recipe')) {
-  showRandomRecipes(6);
-}
-
-
-
-
-
-function renderRecipeList(data) {
-  recipeList.innerHTML = "";
-  data.forEach(cat => {
-    const details = document.createElement("details");
-    const summary = document.createElement("summary");
-    summary.textContent = cat.category;
-    details.appendChild(summary);
-    const ul = document.createElement("ul");
-
-    cat.recipes.forEach(recipe => {
-      const li = document.createElement("li");
-      const a = document.createElement("a");
-      a.href = "#";
-      a.textContent = recipe.title;
-      a.onclick = (e) => {
-        e.preventDefault();
-        loadRecipe(recipe.path, recipe.title, cat.category);
-        fetch(recipe.path)
-          .then(res => {
-            if (!res.ok) {
-              throw new Error(`HTTP error! Status: ${res.status}`);
-            }
-            return res.text();
-          })
-          .then(md => {
-            selectedRecipe.title = recipe.title;
-            preview.innerHTML = marked.parse(md);
-            exportBtn.style.display = "inline-block";
-          })
-          .catch(error => {
-            console.error("Problem loading recipe:", error);
-            preview.innerHTML = `<p style="color: red">Nie można załadować przepisu: ${error.message}</p>`;
-          });
-		  sidePanel.classList.remove("open"); // <- ukrywa panel po wyborze
-      };
-      li.appendChild(a);
-      ul.appendChild(li);
-    });
-
-    details.appendChild(ul);
-    recipeList.appendChild(details);
-  });
-}
-
-searchInput.addEventListener("input", () => {
-  const term = searchInput.value.toLowerCase();
-  const filtered = allRecipes.map(cat => ({
-    category: cat.category,
-    recipes: cat.recipes.filter(r => r.title.toLowerCase().includes(term))
-  })).filter(cat => cat.recipes.length > 0);
-
-  renderRecipeList(filtered);
-});
-</script>
-
-<script>
-document.getElementById("exportPdfBtn").addEventListener("click", async () => {
-  window.print();
+      </div>
+    </div>
   
-  /*const { jsPDF } = window.jspdf;
+    <!-- Bottom Dock -->
+    <div id="bottomDock">
+      <button id="tabIngredientsBtn" class="tab-btn-dock" style="display: none;" title="Składniki">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+        <span style="font-size: 10px; display: block;">Składniki</span>
+      </button>
+      <button id="tabPreparationBtn" class="tab-btn-dock" style="display: none;" title="Przygotowanie">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        <span style="font-size: 10px; display: block;">Przepis</span>
+      </button>
 
-    const preview = document.getElementById("preview");
-    const pdf = new jsPDF("p", "mm", "a4");
-    const scale = 2; // poprawia jakość
+      <div class="dock-separator" style="width: 1px; height: 24px; background: rgba(0,0,0,0.1); margin: 0 5px; display: none;"></div>
 
-    await html2canvas(preview, {
-      scale,
-      useCORS: true
-    }).then(canvas => {
-      const imgData = canvas.toDataURL("image/png");
-      const imgProps = pdf.getImageProperties(imgData);
-      const pdfWidth = pdf.internal.pageSize.getWidth();
-      const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+      <button id="favoritesBtn" title="Ulubione">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+      </button>
+      <button id="burgerBtn" title="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
 
-      pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
-      pdf.save(`${selectedRecipe.title || "przepis"}.pdf`);
-    });*/
-  });
-</script>
+    <!-- Drawers -->
+    <div id="drawerRecent" class="drawer">
+      <h3>Ostatnio oglądane</h3>
+      <div id="recentRecipes"></div>
+    </div>
 
+    <div id="drawerFavorites" class="drawer">
+      <h3>Ulubione przepisy</h3>
+      <div id="favoriteRecipes"></div>
+    </div>
+  </main>
 
-<script>
-  const burgerBtn = document.getElementById("burgerBtn");
-  const sidePanel = document.getElementById("sidePanel");
-  const plannerBtn = document.getElementById("plannerBtn");
-  const plannerPanel = document.getElementById("plannerPanel");
-
-  burgerBtn.addEventListener("click", () => {
-    sidePanel.classList.toggle("open");
-    plannerPanel.classList.remove("open");
-  });
-
-  plannerBtn.addEventListener("click", () => {
-    plannerPanel.classList.toggle("open");
-    sidePanel.classList.remove("open");
-  });
-</script>
-
-<script>
-  const copyTextBtn = document.getElementById("copyTextBtn");
-  const copyLinkBtn = document.getElementById("copyLinkBtn");
-
-  copyTextBtn.addEventListener("click", () => {
-    const tempDiv = document.createElement("div");
-    tempDiv.innerHTML = preview.innerHTML;
-    const text = tempDiv.textContent || tempDiv.innerText || "";
-    navigator.clipboard.writeText(text).then(() => {
-      alert("Przepis skopiowany do schowka.");
-    });
-  });
-
-  copyLinkBtn.addEventListener("click", () => {
-    const currentUrl = new URL(window.location.href);
-    currentUrl.searchParams.set("category", selectedRecipe.category);
-    currentUrl.searchParams.set("recipe", selectedRecipe.title);
-    navigator.clipboard.writeText(currentUrl.toString()).then(() => {
-      alert("Link do przepisu skopiowany.");
-    });
-  });
-</script>
-
-<script>
-  const addFav = document.getElementById("addFav");
-
-  addFav.addEventListener("click", () => {
-    toggleFavorite(selectedRecipe);
-    
-  });
-
-</script>
-
-<script>
-  const siteTitle = document.getElementById('siteTitle');
-  const recipeTitle = document.getElementById('recipeTitle');
-  const originalTitle = siteTitle.textContent;
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        siteTitle.textContent = originalTitle;
-      } else {
-        siteTitle.textContent = recipeTitle.textContent;
-        if (recipeTitle.textContent === ''){
-          siteTitle.textContent = 'Ostatnie przepisy';
-        }
-      }
-    });
-  }, { threshold: 0 });
-
-  observer.observe(recipeTitle);
-</script>
-
+  <script src="app.js"></script>
 </body>
 </html>
