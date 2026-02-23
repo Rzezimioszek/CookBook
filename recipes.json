@@ -56,6 +56,10 @@
         "path": "przepisy/Inne/Budyń domowy.md"
       },
       {
+        "title": "Budyń Jaglany Tm21",
+        "path": "przepisy/Inne/Budyń Jaglany - TM21.md"
+      },
+      {
         "title": "Cebularz",
         "path": "przepisy/Inne/Cebularz.md"
       },
@@ -70,6 +74,10 @@
       {
         "title": "Kiszone Ogórki",
         "path": "przepisy/Inne/Kiszone ogórki.md"
+      },
+      {
+        "title": "Kokosowy Suflet Jaglany Z Mango",
+        "path": "przepisy/Inne/Kokosowy Suflet Jaglany z Mango.md"
       },
       {
         "title": "Ostry Sos Chilli",
@@ -137,6 +145,10 @@
         "path": "przepisy/Obiadowe/Kebab wołowy.md"
       },
       {
+        "title": "Kotleciki Z Indyka I Cukinii",
+        "path": "przepisy/Obiadowe/Kotleciki z indyka i cukinii.md"
+      },
+      {
         "title": "Kotlety Mielone",
         "path": "przepisy/Obiadowe/Kotlety mielone.md"
       },
@@ -187,6 +199,10 @@
       {
         "title": "Makaron Z Łososiem",
         "path": "przepisy/Obiadowe/Makaron z łososiem.md"
+      },
+      {
+        "title": "Marokański Gulasz Z Ciecierzycy I Batatów",
+        "path": "przepisy/Obiadowe/Marokański gulasz z ciecierzycy i batatów.md"
       },
       {
         "title": "Mintaj Pieczony",
@@ -283,6 +299,10 @@
       {
         "title": "Żeberka W Miodzie",
         "path": "przepisy/Obiadowe/Żeberka w miodzie.md"
+      },
+      {
+        "title": "Żurek Bez Glutenu",
+        "path": "przepisy/Obiadowe/Żurek bez glutenu.md"
       },
       {
         "title": "Żurek",
