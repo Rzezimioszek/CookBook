@@ -1,0 +1,39 @@
+name: Aktualizacja Listy Przepisów
+
+# Kiedy ma się uruchomić ten proces?
+on:
+  push:
+    branches:
+      - main # Zmień na 'master', jeśli tak nazywa się Twoja główna gałąź
+    paths:
+      - '**.md' # Uruchom tylko, gdy dodasz lub zmienisz plik Markdown
+
+jobs:
+  aktualizuj:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Pozwala GitHub Actions na dodawanie commitów
+
+    steps:
+      - name: Pobranie plików z repozytorium
+        uses: actions/checkout@v4
+
+      - name: Instalacja Pythona
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.14' # Możesz zmienić na swoją wersję
+
+      # Odkomentuj poniższe 2 linijki, jeśli masz plik requirements.txt
+      # - name: Instalacja zależności
+      #   run: pip install -r requirements.txt
+
+      - name: Uruchomienie skryptu
+        # TUTAJ WPISZ NAZWĘ SWOJEGO SKRYPTU:
+        run: python to_json.py 
+
+      - name: Automatyczny Commit i Push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Automatyczna aktualizacja bazy przepisów 🍳"
+          # Ta akcja wykryje, które pliki (np. index.html) skrypt zmienił 
+          # i sama wrzuci je na GitHuba.
