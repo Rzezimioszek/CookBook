@@ -1,4 +1,5 @@
 ![danie](https://i.ibb.co/FbSPX8qQ/1773405466861.png)
+
 Czas przygotowania: ok. 20 minut + ok. 1,5 godziny duszenia
 Ilość: Obiad dla całej rodziny
 # Składniki
